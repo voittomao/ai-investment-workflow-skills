@@ -1,8 +1,30 @@
-# 一级市场项目初判：示例输入
+# Example Input: Primary-Market Quick-Look
 
-## 公开样例声明
+All content below is fictional and uses the sample company NovaCompute.
 
-NovaCompute 为完全虚构的 AI 训练平台样例公司。示例中的公司描述、材料、客户代号和全部业务数字均为虚构样例，不对应任何真实项目、客户、融资或交易。
+## Case
 
+- Company: NovaCompute
+- Context: Fictional AI training platform sample company
+- Material boundary: Fictional examples only; not real customer, financing, revenue, valuation, or transaction data
+- Human review status: needs_human_review
 
-NovaCompute（虚构样例）提供 AI 训练任务调度与资源编排软件。公司 BP 声称产品可提高异构算力利用率，但当前仅提供公司材料与一次 CTO 访谈纪要；客户合同、付款、产品日志和独立 benchmark 均缺失。全部业务描述和数字为虚构样例。
+## Task
+
+Draft a quick-look analysis for NovaCompute based on a fictional BP and source-limited evidence.
+
+## Available Materials
+
+- Fictional BP summary: `company_claim`
+- Fictional product architecture note: `user_provided`
+- Fictional CFO interview note: `interview_note`
+- Fictional revenue snapshot: `financial_snapshot`
+- Fictional market note from an analyst: `inferred`
+- Missing customer reference calls: `missing_evidence`
+
+## Constraints
+
+- Do not provide an investment recommendation.
+- Do not treat company claims as verified facts.
+- Mark all example numbers as fictional examples.
+- Identify what still needs human review.

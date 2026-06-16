@@ -1,83 +1,90 @@
----
-name: investment-risk-radar
-description: Use when investment logic, highlights, and evidence gaps must be converted into prioritized failure modes and executable diligence actions.
----
+# Investment Risk Radar Skill
 
-# 投资风险雷达
+## 1. Skill Objective
 
-## Skill 目标
+This skill is used to map why an investment logic could fail, why highlights may be overstated, and which diligence actions should test the risk.
 
-把投资逻辑可能失效的原因、亮点高估风险、反方假设、证据缺口和材料冲突转化为可回链、可排序、可执行的风险验证中间层。
+## 2. Suitable Use Cases
 
-## 适用场景
+Use this skill after quick-look analysis, before diligence planning, or whenever the analysis needs a sharper anti-thesis and verification agenda.
 
-- 已有项目初判，需要决定最先验证哪些风险。
-- 风险清单过于泛化，无法回连投资逻辑和后续行动。
-- 需要把财务、法律、商业、技术和交易问题纳入同一风险视图。
+## 3. Not Suitable For
 
-## 不适用场景
+Do not use it as a generic risk checklist. Do not list broad risks without tying them to investment logic, highlights, evidence gaps, or material conflicts.
 
-- 不用于宣称项目风险已被消除。
-- 不用于计算精确违约概率、投资回报或法律责任。
-- 不用于替代专项财务、法律、商业或技术尽调。
+## 4. Input Requirements
 
-## 输入要求
+Inputs should be anonymized or permissioned, source-bounded, and limited to the minimum materials needed for the task:
 
-投资逻辑、项目亮点、反方假设、证据缺口、材料冲突和已有 DD 摘要；每项尽量带稳定引用。
+- investment logic
+- highlight analysis
+- counter-hypotheses
+- evidence gaps
+- material conflicts if any
 
-执行前必须确认：资料授权范围、敏感等级、版本、提供方、已知缺口，以及哪些内容不能发送给外部系统。
+## 5. Output Requirements
 
-## 输出要求
+The output should be structured, evidence-aware, and usable by an investment, strategy, or diligence team:
 
-风险标题、类别、关联逻辑、风险信号、证据状态、影响、严重度、可能性、优先级、验证动作、材料请求、目标来源和下一决策点。
+- risk radar table
+- risk category
+- linked logic/highlight/counter-hypothesis
+- risk signal
+- evidence status
+- impact if true
+- priority
+- diligence action
+- material request
 
-输出必须区分：事实、公司单方口径、访谈陈述、分析推断、投资观点和信息缺口。
+## 6. Evidence Label Rules
 
-## 证据标签规则
+Use these labels:
 
-| 标签 | 含义 | 使用要求 |
-| --- | --- | --- |
-| `user_provided` | 用户直接提供的资料或说明 | 记录材料名称，不自动视为已核验事实 |
-| `company_claim` | 公司、创始人或 BP 的单方口径 | 必须标明“公司口径，待交叉验证” |
-| `interview_note` | 访谈纪要中的陈述 | 标明访谈对象、日期或版本；不能替代底层材料 |
-| `financial_snapshot` | 财务快照、管理报表或模型摘录 | 标明是否审计、口径和期间 |
-| `third_party_unverified` | 第三方材料但尚未复核 | 说明来源与未核验状态 |
-| `inferred` | 基于现有材料形成的分析推断 | 给出推断链和可能改变判断的条件 |
-| `missing_evidence` | 关键证据缺失 | 转化为材料请求或尽调问题 |
-| `needs_human_review` | 需要投资团队确认 | 不得自动升级为确定性结论 |
+- user_provided
+- company_claim
+- interview_note
+- financial_snapshot
+- third_party_unverified
+- inferred
+- missing_evidence
+- needs_human_review
 
+Never treat a `company_claim` as verified fact. Use `inferred` for analytical judgment and `missing_evidence` when a conclusion cannot be supported. Use `needs_human_review` before the output is circulated.
 
-同一陈述可以使用多个标签，但不得以 `needs_human_review` 掩盖缺失证据。
+## 7. Prohibited Wording
 
-## 禁止性表述
+Do not output investment recommendations, securities trading advice, legal advice, financial advice, tax advice, or deterministic conclusions. Do not invent customers, revenue, financing, valuation, technical metrics, transaction terms, or founder backgrounds.
 
-- 不得输出确定性投资推荐、绝对增长判断、验证完成声明或风险清零结论。
-- 不得把 `company_claim`、`interview_note` 或 `third_party_unverified` 改写为已核验事实。
-- 不得编造客户、收入、融资、财务、估值、技术性能、团队履历或交易条款。
-- 不得生成法律、财务、税务或投资决策意见；可提出需专业机构核验的事项。
-- 不得替代人工尽调、投资经理判断、投委会决策或项目状态路由。
-- 信息不足时必须写明“信息不足，需进一步尽调”，并给出下一步验证动作。
+Avoid wording that implies certainty when evidence is incomplete. Examples of prohibited conclusion patterns include unconditional outcome language, no-risk language, verified-growth language, automatic investment decisions, or final investment-call language.
 
+## 8. Process
 
-## 处理流程
+1. Identify the logic that could break.
+2. Translate overclaiming risk into testable risk signals.
+3. Tie each risk back to evidence gaps or source conflicts.
+4. Prioritize risks by judgment sensitivity.
+5. Define material requests and next decision points.
 
-1. 从每条投资逻辑反推最可能的失效方式。
-2. 检查亮点是否可能由样本选择、口径混合或一次性交付造成。
-3. 纳入反方假设、证据缺口、材料矛盾和专项 DD 事项。
-4. 按影响和验证紧迫性排序，不把概率当作已知事实。
-5. 为每项风险设计 diligence action、material request 和 target source。
-6. 将高优先级风险送入尽调问题地图。
+## 9. Output Format
 
-## 输出格式
+Use Markdown tables or JSON-like structured sections. Every material claim should carry an evidence label or an explicit note that it needs human review.
 
-结构化风险数组和 Priority View；风险项必须能够回链到逻辑、亮点、反方或证据缺口。
+Core fields:
 
-优先使用短标题、表格和可执行 bullet；每个重要观点应包含证据边界和可能改变判断的条件。
+- risk_id
+- risk_title
+- risk_category
+- linked_logic
+- risk_signal
+- evidence_status
+- why_it_matters
+- priority
+- diligence_action
 
-## 人工复核要求
+## 10. Human Review Requirement
 
-投资团队确认风险优先级、严重度、可接受边界和下一决策点；模型不得据此自动决定项目去留。
+Human review is mandatory before the output is used in an investment workpaper, diligence plan, committee discussion, founder feedback, or business decision process.
 
-## 与 AI InvestOS 系统模块的对应关系
+## 11. AI InvestOS Module Mapping
 
-投资逻辑 / 亮点 / 反方 / 证据缺口 → 风险雷达 → 核心待验证问题地图。
+This skill maps to: **Risk radar / risk mapping**.

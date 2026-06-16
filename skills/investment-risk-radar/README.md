@@ -1,31 +1,38 @@
-# 投资风险雷达
+# Investment Risk Radar
 
-`investment-risk-radar` 是一项一级市场投研 workflow skill，用于：把投资逻辑可能失效的原因、亮点高估风险、反方假设、证据缺口和材料冲突转化为可回链、可排序、可执行的风险验证中间层。
+Turn highlights, assumptions, and evidence gaps into risk hypotheses and verification actions.
 
-## 何时使用
+[中文镜像 / Chinese mirror](zh-CN/README.md)
 
-- 已有项目初判，需要决定最先验证哪些风险。
-- 风险清单过于泛化，无法回连投资逻辑和后续行动。
-- 需要把财务、法律、商业、技术和交易问题纳入同一风险视图。
+## When to Use
 
-## 文件说明
+Use this skill after quick-look analysis, before diligence planning, or whenever the analysis needs a sharper anti-thesis and verification agenda.
 
-| 文件 | 用途 |
-| --- | --- |
-| `skill.md` | 完整工作流指令、证据纪律和人工复核要求 |
-| `input_contract.md` | 可接受输入、最小字段和敏感边界 |
-| `output_schema.md` | 结构化输出合同 |
-| `example_input.md` | NovaCompute 虚构样例输入 |
-| `example_output.md` | 克制、可审阅的虚构样例输出 |
-| `quality_checklist.md` | 运行后质量检查 |
+## What It Produces
 
-## 快速使用
+- risk radar table
+- risk category
+- linked logic/highlight/counter-hypothesis
+- risk signal
+- evidence status
+- impact if true
+- priority
+- diligence action
+- material request
 
-1. 先阅读 `input_contract.md`，确认输入边界。
-2. 按 `skill.md` 执行工作流。
-3. 用 `output_schema.md` 组织结果。
-4. 用 `quality_checklist.md` 做人工复核。
+## Evidence Discipline
 
-## 边界
+This skill must separate facts, company claims, interview notes, financial snapshots, analytical inferences, missing evidence, and items that need human review.
 
-该 skill 辅助组织投资判断，不提供投资决策、法律、财务或税务意见，也不替代人工尽调。
+## AI InvestOS Module Mapping
+
+Risk radar / risk mapping
+
+## Files
+
+- [`skill.md`](skill.md)
+- [`input_contract.md`](input_contract.md)
+- [`output_schema.md`](output_schema.md)
+- [`example_input.md`](example_input.md)
+- [`example_output.md`](example_output.md)
+- [`quality_checklist.md`](quality_checklist.md)

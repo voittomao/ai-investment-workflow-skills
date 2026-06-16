@@ -1,15 +1,30 @@
-# 项目资料分诊：示例输入
+# Example Input: Source Material Triage
 
-## 公开样例声明
+All content below is fictional and uses the sample company NovaCompute.
 
-NovaCompute 为完全虚构的 AI 训练平台样例公司。示例中的公司描述、材料、客户代号和全部业务数字均为虚构样例，不对应任何真实项目、客户、融资或交易。
+## Case
 
+- Company: NovaCompute
+- Context: Fictional AI training platform sample company
+- Material boundary: Fictional examples only; not real customer, financing, revenue, valuation, or transaction data
+- Human review status: needs_human_review
 
-- 项目：NovaCompute（虚构样例）
-- 定位：AI 训练任务调度与资源编排软件（虚构样例）
-- 已提供材料：
-  - `bp_summary.md`：公司 BP 摘要，公司提供，虚构样例
-  - `product_overview.md`：产品架构说明，公司提供，虚构样例
-  - `interview_cto.md`：CTO 访谈纪要，虚构样例
-  - `financial_snapshot.csv`：管理口径财务快照，未经审计，全部数字为虚构样例
-- 使用边界：仅用于公开 workflow 演示，不含真实项目数据。
+## Task
+
+Triage a BP-only material package for NovaCompute, a fictional AI training platform sample company.
+
+## Available Materials
+
+- Fictional BP summary: `company_claim`
+- Fictional product architecture note: `user_provided`
+- Fictional CFO interview note: `interview_note`
+- Fictional revenue snapshot: `financial_snapshot`
+- Fictional market note from an analyst: `inferred`
+- Missing customer reference calls: `missing_evidence`
+
+## Constraints
+
+- Do not provide an investment recommendation.
+- Do not treat company claims as verified facts.
+- Mark all example numbers as fictional examples.
+- Identify what still needs human review.

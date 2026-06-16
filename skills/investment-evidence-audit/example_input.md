@@ -1,12 +1,30 @@
-# 投资分析证据边界审计：示例输入
+# Example Input: Investment Evidence Audit
 
-## 公开样例声明
+All content below is fictional and uses the sample company NovaCompute.
 
-NovaCompute 为完全虚构的 AI 训练平台样例公司。示例中的公司描述、材料、客户代号和全部业务数字均为虚构样例，不对应任何真实项目、客户、融资或交易。
+## Case
 
+- Company: NovaCompute
+- Context: Fictional AI training platform sample company
+- Material boundary: Fictional examples only; not real customer, financing, revenue, valuation, or transaction data
+- Human review status: needs_human_review
 
-待审计文本来自 NovaCompute（虚构样例）初判：
+## Task
 
-> NovaCompute 技术领先，客户续费稳定，未来将保持高速增长。其调度系统可显著提高算力利用率，因此项目不存在核心技术风险。
+Audit a NovaCompute quick-look memo for unsupported claims and overconfident language.
 
-可用证据仅包括虚构 BP、产品说明和 CTO 访谈纪要；全部业务数字均为虚构样例。
+## Available Materials
+
+- Fictional BP summary: `company_claim`
+- Fictional product architecture note: `user_provided`
+- Fictional CFO interview note: `interview_note`
+- Fictional revenue snapshot: `financial_snapshot`
+- Fictional market note from an analyst: `inferred`
+- Missing customer reference calls: `missing_evidence`
+
+## Constraints
+
+- Do not provide an investment recommendation.
+- Do not treat company claims as verified facts.
+- Mark all example numbers as fictional examples.
+- Identify what still needs human review.

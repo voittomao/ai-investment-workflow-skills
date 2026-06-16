@@ -1,31 +1,35 @@
-# 投资分析证据边界审计
+# Investment Evidence Audit
 
-`investment-evidence-audit` 是一项一级市场投研 workflow skill，用于：审查投资分析文本中的事实、公司口径、访谈陈述、推断、投资观点和信息缺口，识别过度确定性、缺失引用、虚假精确、禁止性结论，并给出保留判断力度的改写建议。
+Review an investment workpaper for evidence discipline before circulation.
 
-## 何时使用
+[中文镜像 / Chinese mirror](zh-CN/README.md)
 
-- quick look memo、风险雷达或投资母稿准备内部流转前。
-- 模型输出内容较深，但需要检查是否越过证据边界。
-- 需要把宣传性或确定性表述改成可审阅的投资判断。
+## When to Use
 
-## 文件说明
+Use this skill as the evidence boundary gate before sharing quick-look analysis, risk radar, DD question maps, or investment workpapers.
 
-| 文件 | 用途 |
-| --- | --- |
-| `skill.md` | 完整工作流指令、证据纪律和人工复核要求 |
-| `input_contract.md` | 可接受输入、最小字段和敏感边界 |
-| `output_schema.md` | 结构化输出合同 |
-| `example_input.md` | NovaCompute 虚构样例输入 |
-| `example_output.md` | 克制、可审阅的虚构样例输出 |
-| `quality_checklist.md` | 运行后质量检查 |
+## What It Produces
 
-## 快速使用
+- evidence audit findings
+- claim classification
+- overstatement flags
+- prohibited conclusion flags
+- rewrite suggestions
+- human review required items
 
-1. 先阅读 `input_contract.md`，确认输入边界。
-2. 按 `skill.md` 执行工作流。
-3. 用 `output_schema.md` 组织结果。
-4. 用 `quality_checklist.md` 做人工复核。
+## Evidence Discipline
 
-## 边界
+This skill must separate facts, company claims, interview notes, financial snapshots, analytical inferences, missing evidence, and items that need human review.
 
-该 skill 辅助组织投资判断，不提供投资决策、法律、财务或税务意见，也不替代人工尽调。
+## AI InvestOS Module Mapping
+
+Evidence boundary audit / quality gate
+
+## Files
+
+- [`skill.md`](skill.md)
+- [`input_contract.md`](input_contract.md)
+- [`output_schema.md`](output_schema.md)
+- [`example_input.md`](example_input.md)
+- [`example_output.md`](example_output.md)
+- [`quality_checklist.md`](quality_checklist.md)

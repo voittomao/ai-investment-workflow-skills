@@ -1,36 +1,35 @@
-# 一级市场项目初判：输入合同
+# Input Contract: Primary-Market Quick-Look
 
-## 最小输入
+## Required Inputs
 
-- `case_name`：项目代号或脱敏名称。
-- `project_context`：项目定位、客户、产品和商业模式的脱敏摘要。
-- `available_materials`：材料清单、版本、日期和提供方。
-- `evidence_context`：带 evidence label 的摘录或摘要。
-- `known_limitations`：已知缺口、冲突和不可使用范围。
-- `sensitive_boundary`：保密、隐私和外部模型使用限制。
+- material triage result
+- company-provided BP or summary
+- product and market notes
+- financial or traction snapshots if available
+- known missing evidence
 
-## 推荐输入
+## Accepted Evidence Labels
 
-资料分诊结果、项目上下文、证据摘录、已知限制和投资团队关注点；输入应尽量带 evidence_id 或材料引用。
+- user_provided
+- company_claim
+- interview_note
+- financial_snapshot
+- third_party_unverified
+- inferred
+- missing_evidence
+- needs_human_review
 
-## 可接受材料
+## Input Boundary
 
-- 脱敏 BP、产品材料和公司说明。
-- 经授权的访谈摘要、财务快照、客户或合同摘要。
-- 未核验第三方资料，但必须标注来源与状态。
-- 既有投资逻辑、风险、DD 项或母稿版本。
+- Use anonymized or fictional examples unless the user has explicit permission to process real materials.
+- Do not include private customer lists, cap tables, financing documents, legal documents, or personal information in public examples.
+- If material is missing, mark it as `missing_evidence` rather than inventing it.
+- If a claim comes from the company, mark it as `company_claim`.
 
-## 不应输入
+## Minimum Viable Input
 
-- 未经授权的真实客户名单、身份证明、联系方式或交易账户。
-- API key、密码、访问令牌和内部系统凭证。
-- 不必要的完整真实 BP、合同、财务底稿或个人敏感信息。
-- 无法说明来源、版本或使用权限的材料。
+Draft a quick-look analysis for NovaCompute based on a fictional BP and source-limited evidence.
 
-## 输入不足时
+## Human Review
 
-不得补造事实。输出“信息不足，需进一步尽调”，并列出最小必要材料、目标来源和验证目的。
-
-## 公开样例声明
-
-NovaCompute 为完全虚构的 AI 训练平台样例公司。示例中的公司描述、材料、客户代号和全部业务数字均为虚构样例，不对应任何真实项目、客户、融资或交易。
+The user must confirm whether materials are suitable for analysis and whether any output can be circulated.

@@ -1,34 +1,35 @@
-# 投资风险雷达：输出 Schema
+# Output Schema: Investment Risk Radar
 
-## Schema
+Use this schema as a reference shape. It is intentionally lightweight so teams can adapt it to Markdown, JSON, tables, or internal tools.
 
 ```json
 {
-  "risks": [{
-    "risk_id": "string",
-    "risk_title": "string",
-    "risk_category": "logic_breakpoint|highlight_overclaiming|counter_hypothesis|evidence_gap|information_conflict|financial_dd|legal_dd|commercial_dd|transaction|technology|customer|competition|team|supply_chain|market_timing|other",
-    "linked_reasoning_ids": ["string"],
-    "risk_signal": "string",
-    "current_evidence_status": "string",
-    "why_it_matters": "string",
-    "impact_if_true": "string",
-    "severity": "high|medium|low",
-    "probability": "unknown|low|medium|high",
-    "priority": "verify_first|focus|follow_up",
-    "diligence_action": "string",
-    "material_request": "string",
-    "target_source": "string",
-    "next_decision_point": "string",
-    "evidence_labels": ["evidence_label"]
-  }]
+  "skill": "investment-risk-radar",
+  "case_name": "NovaCompute fictional example",
+  "evidence_boundary": {
+    "all_examples_are_fictional": true,
+    "requires_human_review": true
+  },
+  "output": {
+    "risk_id": "..."
+    "risk_title": "..."
+    "risk_category": "..."
+    "linked_logic": "..."
+    "risk_signal": "..."
+    "evidence_status": "..."
+    "why_it_matters": "..."
+    "priority": "..."
+    "diligence_action": "..."
+  },
+  "quality_flags": [
+    "needs_human_review"
+  ]
 }
 ```
 
-## 通用约束
+## Field Rules
 
-- 所有重要判断必须包含证据引用或 evidence label。
-- `company_claim` 不得自动升级为事实。
-- `probability`、`confidence` 和 `priority` 是分析组织字段，不是系统投资决策线。
-- 缺失字段应返回 warning 或 `missing_evidence`，不得编造补齐。
-- 输出必须包含人工复核项和判断边界。
+- Each analytical claim should include an evidence label.
+- Missing facts should remain missing, not invented.
+- High-sensitivity conclusions should include what would change the view.
+- The output must not decide whether to invest.

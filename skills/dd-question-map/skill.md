@@ -1,83 +1,91 @@
----
-name: dd-question-map
-description: Use when prioritized risks must be translated into a complete diligence issue map spanning interviews, materials, data, technical tests, customers, finance, legal, and third parties.
----
+# DD Question Map Skill
 
-# 核心待验证问题地图
+## 1. Skill Objective
 
-## Skill 目标
+This skill is used to turn risk hypotheses into a structured diligence question map across management, technology, customer, commercial, financial, operational, legal, transaction, and third-party validation workstreams.
 
-从风险和核心待验证事项生成完整 DD 问题地图，明确问谁、查什么、需要什么证据、什么结果支持或推翻判断，以及下一步如何处理。
+## 2. Suitable Use Cases
 
-## 适用场景
+Use this skill when a team needs to move from investor-style risk thinking to actionable diligence execution.
 
-- 准备管理层、技术、客户、财务或专家尽调。
-- 需要把访谈问题、材料请求和数据核验放入同一地图。
-- 需要保证 DD 工作能回连投资逻辑和风险。
+## 3. Not Suitable For
 
-## 不适用场景
+Do not reduce diligence to interview questions only. Do not create questions that assume unverified facts are true.
 
-- 不把 DD 简化为创始人访谈问题。
-- 不替代律师、会计师、技术专家或客户的专业判断。
-- 不生成诱导披露、越权索取或违反隐私法规的问题。
+## 4. Input Requirements
 
-## 输入要求
+Inputs should be anonymized or permissioned, source-bounded, and limited to the minimum materials needed for the task:
 
-风险雷达、投资逻辑、证据缺口、已有材料清单、可接触的访谈对象和项目授权边界。
+- risk radar
+- quick-look analysis
+- known material gaps
+- available target sources
+- human review priorities
 
-执行前必须确认：资料授权范围、敏感等级、版本、提供方、已知缺口，以及哪些内容不能发送给外部系统。
+## 5. Output Requirements
 
-## 输出要求
+The output should be structured, evidence-aware, and usable by an investment, strategy, or diligence team:
 
-按管理层、技术产品、客户商业、财务收入、交付运营、法务交易和第三方专家分类的问题或任务，并附支持/推翻条件和材料请求。
+- DD issue map
+- question or task
+- target source
+- evidence needed
+- supporting signal
+- breaking signal
+- material request
+- priority
+- expected next action
 
-输出必须区分：事实、公司单方口径、访谈陈述、分析推断、投资观点和信息缺口。
+## 6. Evidence Label Rules
 
-## 证据标签规则
+Use these labels:
 
-| 标签 | 含义 | 使用要求 |
-| --- | --- | --- |
-| `user_provided` | 用户直接提供的资料或说明 | 记录材料名称，不自动视为已核验事实 |
-| `company_claim` | 公司、创始人或 BP 的单方口径 | 必须标明“公司口径，待交叉验证” |
-| `interview_note` | 访谈纪要中的陈述 | 标明访谈对象、日期或版本；不能替代底层材料 |
-| `financial_snapshot` | 财务快照、管理报表或模型摘录 | 标明是否审计、口径和期间 |
-| `third_party_unverified` | 第三方材料但尚未复核 | 说明来源与未核验状态 |
-| `inferred` | 基于现有材料形成的分析推断 | 给出推断链和可能改变判断的条件 |
-| `missing_evidence` | 关键证据缺失 | 转化为材料请求或尽调问题 |
-| `needs_human_review` | 需要投资团队确认 | 不得自动升级为确定性结论 |
+- user_provided
+- company_claim
+- interview_note
+- financial_snapshot
+- third_party_unverified
+- inferred
+- missing_evidence
+- needs_human_review
 
+Never treat a `company_claim` as verified fact. Use `inferred` for analytical judgment and `missing_evidence` when a conclusion cannot be supported. Use `needs_human_review` before the output is circulated.
 
-同一陈述可以使用多个标签，但不得以 `needs_human_review` 掩盖缺失证据。
+## 7. Prohibited Wording
 
-## 禁止性表述
+Do not output investment recommendations, securities trading advice, legal advice, financial advice, tax advice, or deterministic conclusions. Do not invent customers, revenue, financing, valuation, technical metrics, transaction terms, or founder backgrounds.
 
-- 不得输出确定性投资推荐、绝对增长判断、验证完成声明或风险清零结论。
-- 不得把 `company_claim`、`interview_note` 或 `third_party_unverified` 改写为已核验事实。
-- 不得编造客户、收入、融资、财务、估值、技术性能、团队履历或交易条款。
-- 不得生成法律、财务、税务或投资决策意见；可提出需专业机构核验的事项。
-- 不得替代人工尽调、投资经理判断、投委会决策或项目状态路由。
-- 信息不足时必须写明“信息不足，需进一步尽调”，并给出下一步验证动作。
+Avoid wording that implies certainty when evidence is incomplete. Examples of prohibited conclusion patterns include unconditional outcome language, no-risk language, verified-growth language, automatic investment decisions, or final investment-call language.
 
+## 8. Process
 
-## 处理流程
+1. Group questions by diligence category.
+2. Match each question to a risk or investment logic.
+3. Define what evidence would support or break the view.
+4. Assign target sources and output formats.
+5. Keep material requests separate from interview prompts.
 
-1. 将每项高优先级风险转成可被证据回答的问题。
-2. 判断最合适的目标来源：管理层、产品日志、客户、合同、财务模型或第三方。
-3. 区分访谈、材料、数据、技术测试、客户 reference 和交易核验。
-4. 写明支持信号、风险信号和所需证据。
-5. 按一级类别聚合，避免把所有细分类型平铺。
-6. 输出可执行的下一步和结果记录格式。
+## 9. Output Format
 
-## 输出格式
+Use Markdown tables or JSON-like structured sections. Every material claim should carry an evidence label or an explicit note that it needs human review.
 
-DD issue map 表格或 JSON；页面按一级类别展示，细分 `dd_type` 用于筛选和执行。
+Core fields:
 
-优先使用短标题、表格和可执行 bullet；每个重要观点应包含证据边界和可能改变判断的条件。
+- dd_id
+- dd_category
+- dd_type
+- question_or_task
+- target_source
+- linked_risk
+- evidence_needed
+- support_signal
+- break_signal
+- priority
 
-## 人工复核要求
+## 10. Human Review Requirement
 
-投资经理确认问题的必要性、对象、权限和表述；专业机构确认法律、财务、税务和技术专项范围。
+Human review is mandatory before the output is used in an investment workpaper, diligence plan, committee discussion, founder feedback, or business decision process.
 
-## 与 AI InvestOS 系统模块的对应关系
+## 11. AI InvestOS Module Mapping
 
-风险雷达 → 核心待验证问题地图 → 材料请求 / 访谈提纲 / 投资分析母稿更新。
+This skill maps to: **Core validation issue map / DD execution**.

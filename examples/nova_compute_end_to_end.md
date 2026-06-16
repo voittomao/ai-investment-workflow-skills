@@ -1,142 +1,75 @@
-# NovaCompute 端到端工作流示例
+# NovaCompute End-to-End Example
 
-> NovaCompute 是完全虚构的 AI 训练平台样例公司。本文件中的项目描述、材料、客户代号和业务信息均为虚构样例，不对应任何真实公司或交易。
+This is a fully fictional example showing how the six workflow skills can work together. NovaCompute is not a real company. All numbers, materials, customers, revenue, financing, valuation, and transaction terms are fictional examples.
 
-## 场景
+## Case Boundary
 
-投资团队最初只收到一份公司 BP 和产品概览。随后又收到 CTO、CFO 访谈摘要、未经审计的财务快照和虚构客户管线样表。团队希望保留 V1 判断，并在 V2 中说明哪些判断被强化、被削弱，哪些风险仍需验证。
+- Company: NovaCompute
+- Sector: Fictional AI training platform sample company
+- Material package: fictional BP, fictional product note, fictional CFO/CTO notes, fictional sample pipeline
+- Evidence boundary: all examples require human review
+- Advice boundary: no investment, legal, financial, tax, or securities trading advice
 
-这条链路的目标不是自动作出项目决策，而是形成可审阅、可追溯、可继续尽调的投资分析母稿。
+## 1. Source Material Triage
 
-## 01 `source-material-triage`
+**Purpose:** Identify what each project material can and cannot support before analysis begins.
 
-### 输入
+**Fictional input:** NovaCompute provides a fictional BP, fictional product note, fictional CFO/CTO notes, and fictional sample pipeline data. All figures are fictional examples.
 
-- BP 摘要：`company_claim`
-- 产品概览：`company_claim`
-- CTO 访谈摘要：`interview_note`
-- 财务快照：`financial_snapshot`
-- 客户管线样表：`user_provided`
+**Representative output:** The workflow captures `case_name, material_maturity, materials, evidence_boundary` and marks evidence as `company_claim`, `interview_note`, `financial_snapshot`, `inferred`, `missing_evidence`, or `needs_human_review`.
 
-### 输出摘要
+**Human review:** Required before the output becomes part of an investment workpaper.
 
-- 资料成熟度：多来源初步研判，尚未交叉验证。
-- 可初步判断：产品问题定义、公司自述技术路径、管理层收入口径。
-- 不能确认：客户实际使用、付款、续费、技术性能复现和软件收入独立性。
-- 关键缺口：客户合同与使用数据、benchmark 原始日志、收入拆分和交付工时。
+## 2. Primary-Market Quick-Look
 
-### 交给下一步
+**Purpose:** Create a first-pass investor-style view of a company without overstating the evidence.
 
-资料分诊结果成为项目初判的输入边界，避免把“收到材料”误写成“事实已确认”。
+**Fictional input:** NovaCompute provides a fictional BP, fictional product note, fictional CFO/CTO notes, and fictional sample pipeline data. All figures are fictional examples.
 
-## 02 `primary-market-quick-look`
+**Representative output:** The workflow captures `project_essence, business_model, investment_logic, highlights` and marks evidence as `company_claim`, `interview_note`, `financial_snapshot`, `inferred`, `missing_evidence`, or `needs_human_review`.
 
-### 项目本质
+**Human review:** Required before the output becomes part of an investment workpaper.
 
-NovaCompute 的核心命题不是 AI 基础设施市场是否增长，而是其调度软件能否在云工具、开源方案和客户自建系统之外，形成可复现、可持续付费且不依赖重实施的独立软件价值。`inferred`
+## 3. Investment Risk Radar
 
-### 初步投资逻辑
+**Purpose:** Turn highlights, assumptions, and evidence gaps into risk hypotheses and verification actions.
 
-1. 产品若能跨算力环境持续改善任务调度效率，可能形成独立软件价值。
-2. 客户从试用到合同、付款、持续使用和续费的闭环决定商业真实性。
-3. 软件、实施和资源相关收入能否拆分，决定收入质量与可扩展性判断。
+**Fictional input:** NovaCompute provides a fictional BP, fictional product note, fictional CFO/CTO notes, and fictional sample pipeline data. All figures are fictional examples.
 
-### 反方假设
+**Representative output:** The workflow captures `risk_id, risk_title, risk_category, linked_logic` and marks evidence as `company_claim`, `interview_note`, `financial_snapshot`, `inferred`, `missing_evidence`, or `needs_human_review`.
 
-- 客户已有工具足以解决主要问题。
-- 性能改善依赖特定环境，难以跨客户复现。
-- 收入和交付依赖定制服务，而非标准化软件。
+**Human review:** Required before the output becomes part of an investment workpaper.
 
-### 判断边界
+## 4. DD Question Map
 
-当前适合进入针对性验证。`missing_evidence` `needs_human_review`
+**Purpose:** Convert risks into executable diligence questions, material requests, data checks, and expert validation.
 
-## 03 `investment-risk-radar`
+**Fictional input:** NovaCompute provides a fictional BP, fictional product note, fictional CFO/CTO notes, and fictional sample pipeline data. All figures are fictional examples.
 
-| 风险 | 回连逻辑 | 当前证据状态 | 优先动作 |
-| --- | --- | --- | --- |
-| 软件价值可能被替代 | 独立软件价值 | 缺少客户对照和迁移成本证据 | 客户 reference 与替代路线矩阵 |
-| 性能效果难以复现 | 技术亮点 | 仅有公司材料和访谈口径 | 获取脚本、日志并设计独立复验 |
-| 收入质量可能被混合口径高估 | 商业模式 | 财务快照未经审计且未拆分 | 合同、发票、回款和收入确认勾稽 |
-| 交付依赖重定制 | 标准化交付 | 缺少客户级工时和复用数据 | 部署工时、支持工单和代码复用分析 |
+**Representative output:** The workflow captures `dd_id, dd_category, dd_type, question_or_task` and marks evidence as `company_claim`, `interview_note`, `financial_snapshot`, `inferred`, `missing_evidence`, or `needs_human_review`.
 
-风险雷达把亮点和逻辑转换成可执行验证任务，而不是普通风险清单。
+**Human review:** Required before the output becomes part of an investment workpaper.
 
-## 04 `dd-question-map`
+## 5. Versioned Investment Update
 
-### 技术 / 产品
+**Purpose:** Explain how new materials change the prior view instead of overwriting the old report.
 
-- 同一任务在不同环境中能否复现效果？
-- 哪些性能改善来自产品能力，哪些来自人工调参？
-- 需要：测试脚本、原始日志、环境配置和异常记录。
+**Fictional input:** NovaCompute provides a fictional BP, fictional product note, fictional CFO/CTO notes, and fictional sample pipeline data. All figures are fictional examples.
 
-### 客户 / 商业
+**Representative output:** The workflow captures `version_id, material_change, strengthened, weakened` and marks evidence as `company_claim`, `interview_note`, `financial_snapshot`, `inferred`, `missing_evidence`, or `needs_human_review`.
 
-- 客户为何选择该产品，而不是云工具、开源方案或自建系统？
-- 实际使用、合同、付款和续费状态如何对应？
-- 需要：客户授权访谈、合同摘要、使用日志和未成交复盘。
+**Human review:** Required before the output becomes part of an investment workpaper.
 
-### 财务 / 收入
+## 6. Investment Evidence Audit
 
-- 软件、实施、运维和资源相关收入如何拆分？
-- 合同、发票、回款和收入确认能否按客户勾稽？
-- 需要：客户级收入质量表和成本分摊说明。
+**Purpose:** Review an investment workpaper for evidence discipline before circulation.
 
-### 交付 / 运营
+**Fictional input:** NovaCompute provides a fictional BP, fictional product note, fictional CFO/CTO notes, and fictional sample pipeline data. All figures are fictional examples.
 
-- 每次部署需要多少标准配置、定制开发和驻场支持？
-- 收入增长是否要求人员线性增长？
-- 需要：部署工时、工单、版本记录和代码复用数据。
+**Representative output:** The workflow captures `finding_id, text_span, issue_type, evidence_label` and marks evidence as `company_claim`, `interview_note`, `financial_snapshot`, `inferred`, `missing_evidence`, or `needs_human_review`.
 
-## 05 `versioned-investment-update`
+**Human review:** Required before the output becomes part of an investment workpaper.
 
-### V1 → V2 资料变化
+## End State
 
-- V1：BP 与产品概览。
-- V2：新增 CTO、CFO 访谈摘要、财务快照和客户管线样表。
-
-### 判断变化
-
-- **被强化**：技术流程的可解释性提高，但仍需日志复验。
-- **被削弱**：软件收入独立性的初步乐观假设受到混合收入口径挑战。
-- **新增风险**：管理口径可能混合软件、实施和资源相关收入。
-- **仍待核验**：客户实际使用、付款、续费、交付工时和跨环境性能。
-
-### 母稿更新建议
-
-- 在商业模式章节增加收入拆分和客户级勾稽分析。
-- 在技术章节补充 CTO 口径，同时保留复验边界。
-- 不删除替代路线和重定制的反方假设。
-
-## 06 `investment-evidence-audit`
-
-### 待审计表达
-
-> 公司技术能力领先，客户质量较好，商业化正在加速。
-
-### 审计结果
-
-| 表达 | 问题 | 建议改写 |
-| --- | --- | --- |
-| 技术能力领先 | 缺少比较对象、同条件指标和独立复验 | 公司材料将跨环境调度列为核心卖点；相对优势需与替代路线进行同条件验证。 |
-| 客户质量较好 | 缺少合同、付款、使用和续费证据 | 当前客户质量信息主要来自公司材料，需通过客户级证据和授权访谈核验。 |
-| 商业化正在加速 | 缺少统一期间、漏斗和收入质量口径 | 新增材料提高了对管线的可见度，但转化、回款和持续使用仍需交叉验证。 |
-
-### 最终状态
-
-输出可进入内部工作底稿，但仍标记为 `needs_human_review`。投资团队需要确认证据引用、判断力度、风险优先级和下一步尽调安排。
-
-## 完整链路的价值
-
-```text
-材料进入
-→ 明确能分析到什么程度
-→ 形成项目特异的初步判断
-→ 找到投资逻辑的失效方式
-→ 设计可改变判断的尽调动作
-→ 新资料到来后保留判断变化
-→ 在进入正式母稿前审计证据边界
-```
-
-这也是 AI InvestOS 与一次性模型问答的主要区别：输出不是终点，而是可版本化、可回链、需要人工确认的投研工作流。
-
+The final artifact is an investment analysis workpaper draft that remains source-bounded, evidence-labeled, and subject to human review. It does not decide whether to invest and does not replace professional diligence or investment committee review.

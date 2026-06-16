@@ -1,8 +1,30 @@
-# 核心待验证问题地图：示例输入
+# Example Input: DD Question Map
 
-## 公开样例声明
+All content below is fictional and uses the sample company NovaCompute.
 
-NovaCompute 为完全虚构的 AI 训练平台样例公司。示例中的公司描述、材料、客户代号和全部业务数字均为虚构样例，不对应任何真实项目、客户、融资或交易。
+## Case
 
+- Company: NovaCompute
+- Context: Fictional AI training platform sample company
+- Material boundary: Fictional examples only; not real customer, financing, revenue, valuation, or transaction data
+- Human review status: needs_human_review
 
-NovaCompute（虚构样例）的优先风险包括：软件价值可被替代、性能不可复现、收入结构混合、部署依赖重定制。现有对象包括 CEO、CTO、CFO、COO、产品负责人和可授权的虚构客户 reference。
+## Task
+
+Create a DD question map for NovaCompute covering CTO, CFO, customer references, financial checks, and transaction review.
+
+## Available Materials
+
+- Fictional BP summary: `company_claim`
+- Fictional product architecture note: `user_provided`
+- Fictional CFO interview note: `interview_note`
+- Fictional revenue snapshot: `financial_snapshot`
+- Fictional market note from an analyst: `inferred`
+- Missing customer reference calls: `missing_evidence`
+
+## Constraints
+
+- Do not provide an investment recommendation.
+- Do not treat company claims as verified facts.
+- Mark all example numbers as fictional examples.
+- Identify what still needs human review.

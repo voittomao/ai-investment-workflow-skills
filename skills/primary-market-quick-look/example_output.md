@@ -1,35 +1,25 @@
-# 一级市场项目初判：示例输出
+# Example Output: Primary-Market Quick-Look
 
-## 公开样例声明
+All content below is fictional and for workflow demonstration only.
 
-NovaCompute 为完全虚构的 AI 训练平台样例公司。示例中的公司描述、材料、客户代号和全部业务数字均为虚构样例，不对应任何真实项目、客户、融资或交易。
+## Project Essence
 
+NovaCompute appears to be a fictional AI training platform positioned around training efficiency and workflow orchestration. Current materials support only a preliminary, source-limited view.
 
-## 项目本质
+## Investment Logic
 
-NovaCompute 的核心命题不是“AI Infra 市场是否增长”，而是其调度软件能否在客户已有云、开源框架和自建工具之外，形成可复现、可持续付费且不依赖重实施的独立软件价值。`inferred`
+| Logic | Evidence label | Why it matters | What needs verification |
+| --- | --- | --- | --- |
+| Training workflow pain may create budget pull | inferred | If true, the product could address a real operational bottleneck | Customer reference calls and usage logs |
+| Claimed efficiency advantage could support differentiation | company_claim | Differentiation matters only if reproducible across workloads | Benchmark reproduction and CTO validation |
 
-## 一句话判断
+## Counter-Hypotheses
 
-公司材料支持其具备较清晰的产品问题定义，但客户价值、技术性能、标准化交付和收入质量尚缺少交叉证据，当前适合进入针对性验证，而非形成确定性结论。`company_claim` `interview_note` `missing_evidence`
-
-## 投资逻辑
-
-1. **独立软件价值**：若产品能跨算力环境稳定降低训练等待与资源浪费，则可能形成高于单次项目交付的持续价值。当前依据主要为公司口径；需要产品日志和客户前后对比。
-2. **客户真实性与付费转化**：试用、合同、付款、活跃使用和续费必须形成闭环，否则“客户数量”可能高估商业成熟度。
-3. **商业模式与单位经济**：需拆分软件订阅、实施服务和算力转售，判断增长是否伴随人员和资源成本线性增加。
-
-## 反方假设
-
-- 客户可以用云厂商工具、开源调度框架或内部工程团队解决主要问题。
-- 公司展示的性能提升依赖特定环境，难以跨客户复现。
-- 收入主要来自实施与资源转售，而非可扩展的软件许可。
-
-## 判断边界与下一步
-
-信息不足，需进一步尽调。优先获取客户合同与使用数据、benchmark 原始日志、部署工时和收入拆分，并安排客户 reference 与技术复验。
+- Customers may choose cloud-native tools or open-source alternatives.
+- Efficiency claims may not reproduce outside selected workloads.
+- Deployment may require heavy services work that weakens software gross margin.
 
 
-## 人工复核
+## Human Review
 
-以上内容是工作底稿示例，状态为 `needs_human_review`。投资团队应复核材料引用、判断边界、风险优先级和下一步动作。
+This output requires human review before use in any investment workpaper, diligence plan, committee discussion, founder feedback, or business decision process.

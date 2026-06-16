@@ -1,83 +1,88 @@
----
-name: versioned-investment-update
-description: Use when new project materials arrive and the investment team needs a traceable V1-to-V2 judgment update instead of overwriting the prior memo.
----
+# Versioned Investment Update Skill
 
-# 新增资料后的版本化研判更新
+## 1. Skill Objective
 
-## Skill 目标
+This skill is used to preserve V1/V2 judgment history and explain which views were strengthened, weakened, newly introduced, de-risked, or still unverified after new materials arrive.
 
-新增资料后保留历史判断，输出被强化、被削弱、新增或缓解的风险、已关闭和仍待核验事项，并提出新版投资分析母稿的更新建议。
+## 2. Suitable Use Cases
 
-## 适用场景
+Use this skill when a BP-only quick look is updated with new financial snapshots, interview notes, customer materials, or technical documents.
 
-- 项目从 BP-only 进入多资料初步研判。
-- 新增财务快照、客户数据、技术材料或访谈纪要后更新判断。
-- 团队需要理解“为什么判断变了”，而非只看新版本全文。
+## 3. Not Suitable For
 
-## 不适用场景
+Do not rewrite a fresh report without explaining judgment movement. Do not claim new materials fully verify facts unless the evidence supports that conclusion.
 
-- 不用于静默覆盖 V1 或删除不利判断。
-- 不将新增材料自动视为更高可信度。
-- 不用于自动改变项目 Level、投资状态或投委会结论。
+## 4. Input Requirements
 
-## 输入要求
+Inputs should be anonymized or permissioned, source-bounded, and limited to the minimum materials needed for the task:
 
-V1 资料 manifest、V1 判断、V2 新增资料 manifest、V2 证据摘录、稳定判断项和人工关注点。
+- V1 workpaper
+- new material inventory
+- V2 material summaries
+- prior risks and DD issues
+- human review notes
 
-执行前必须确认：资料授权范围、敏感等级、版本、提供方、已知缺口，以及哪些内容不能发送给外部系统。
+## 5. Output Requirements
 
-## 输出要求
+The output should be structured, evidence-aware, and usable by an investment, strategy, or diligence team:
 
-资料成熟度变化、新增材料、强化/削弱判断、新增/缓解风险、关闭/新增/仍待核验事项、模块更新摘要和新版母稿更新建议。
+- version change summary
+- material maturity change
+- strengthened views
+- weakened views
+- new risks
+- de-risked items
+- still-to-verify items
+- workpaper update recommendations
 
-输出必须区分：事实、公司单方口径、访谈陈述、分析推断、投资观点和信息缺口。
+## 6. Evidence Label Rules
 
-## 证据标签规则
+Use these labels:
 
-| 标签 | 含义 | 使用要求 |
-| --- | --- | --- |
-| `user_provided` | 用户直接提供的资料或说明 | 记录材料名称，不自动视为已核验事实 |
-| `company_claim` | 公司、创始人或 BP 的单方口径 | 必须标明“公司口径，待交叉验证” |
-| `interview_note` | 访谈纪要中的陈述 | 标明访谈对象、日期或版本；不能替代底层材料 |
-| `financial_snapshot` | 财务快照、管理报表或模型摘录 | 标明是否审计、口径和期间 |
-| `third_party_unverified` | 第三方材料但尚未复核 | 说明来源与未核验状态 |
-| `inferred` | 基于现有材料形成的分析推断 | 给出推断链和可能改变判断的条件 |
-| `missing_evidence` | 关键证据缺失 | 转化为材料请求或尽调问题 |
-| `needs_human_review` | 需要投资团队确认 | 不得自动升级为确定性结论 |
+- user_provided
+- company_claim
+- interview_note
+- financial_snapshot
+- third_party_unverified
+- inferred
+- missing_evidence
+- needs_human_review
 
+Never treat a `company_claim` as verified fact. Use `inferred` for analytical judgment and `missing_evidence` when a conclusion cannot be supported. Use `needs_human_review` before the output is circulated.
 
-同一陈述可以使用多个标签，但不得以 `needs_human_review` 掩盖缺失证据。
+## 7. Prohibited Wording
 
-## 禁止性表述
+Do not output investment recommendations, securities trading advice, legal advice, financial advice, tax advice, or deterministic conclusions. Do not invent customers, revenue, financing, valuation, technical metrics, transaction terms, or founder backgrounds.
 
-- 不得输出确定性投资推荐、绝对增长判断、验证完成声明或风险清零结论。
-- 不得把 `company_claim`、`interview_note` 或 `third_party_unverified` 改写为已核验事实。
-- 不得编造客户、收入、融资、财务、估值、技术性能、团队履历或交易条款。
-- 不得生成法律、财务、税务或投资决策意见；可提出需专业机构核验的事项。
-- 不得替代人工尽调、投资经理判断、投委会决策或项目状态路由。
-- 信息不足时必须写明“信息不足，需进一步尽调”，并给出下一步验证动作。
+Avoid wording that implies certainty when evidence is incomplete. Examples of prohibited conclusion patterns include unconditional outcome language, no-risk language, verified-growth language, automatic investment decisions, or final investment-call language.
 
+## 8. Process
 
-## 处理流程
+1. Preserve the prior judgment and material boundary.
+2. Summarize new materials and classify their evidence strength.
+3. Compare judgment movement by module.
+4. Separate strengthened, weakened, new, closed, and still-open issues.
+5. Recommend workpaper updates without pretending the prior view never existed.
 
-1. 冻结 V1 判断和证据引用，不覆盖历史。
-2. 比较 V1/V2 材料 manifest，识别真正新增或变更的材料。
-3. 评估新增材料的证据标签和独立性。
-4. 逐项判断原逻辑是强化、削弱、不变还是仍未知。
-5. 更新风险和 DD 状态，记录关闭依据及残余边界。
-6. 输出新版母稿的增删改建议并等待人工确认。
+## 9. Output Format
 
-## 输出格式
+Use Markdown tables or JSON-like structured sections. Every material claim should carry an evidence label or an explicit note that it needs human review.
 
-版本对比摘要 + 模块更新表 + V2 memo update instructions；不要求逐字 diff。
+Core fields:
 
-优先使用短标题、表格和可执行 bullet；每个重要观点应包含证据边界和可能改变判断的条件。
+- version_id
+- material_change
+- strengthened
+- weakened
+- new_risks
+- de_risked
+- still_to_verify
+- workpaper_updates
 
-## 人工复核要求
+## 10. Human Review Requirement
 
-投资团队确认版本基线、证据可信度、关闭事项、判断变化和母稿修改；模型不得把“收到材料”自动等同于“风险解决”。
+Human review is mandatory before the output is used in an investment workpaper, diligence plan, committee discussion, founder feedback, or business decision process.
 
-## 与 AI InvestOS 系统模块的对应关系
+## 11. AI InvestOS Module Mapping
 
-资料版本更新 → 各分析模块增量更新 → 投资分析母稿新版本 → Markdown 工作底稿导出。
+This skill maps to: **Versioned update / judgment change tracking**.

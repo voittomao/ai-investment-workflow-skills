@@ -1,22 +1,14 @@
-# 投资分析证据边界审计：示例输出
+# Example Output: Investment Evidence Audit
 
-## 公开样例声明
+All content below is fictional and for workflow demonstration only.
 
-NovaCompute 为完全虚构的 AI 训练平台样例公司。示例中的公司描述、材料、客户代号和全部业务数字均为虚构样例，不对应任何真实项目、客户、融资或交易。
-
-
-| 原陈述 | 问题 | 证据判断 | 建议改写 |
+| Finding | Issue | Evidence label | Suggested rewrite |
 | --- | --- | --- | --- |
-| 技术领先 | 缺少比较对象、指标和独立复验 | `company_claim` `missing_evidence` | 公司材料将跨环境调度能力列为核心卖点；其相对优势仍需与云工具、开源方案和客户自建路线进行同条件验证。 |
-| 客户续费稳定 | 输入未提供续费合同、回款或使用数据 | `missing_evidence` | 当前缺少可核验的续费、回款和持续使用证据，信息不足，需进一步尽调。 |
-| 未来将保持高速增长 | 将预测写成确定性事实 | `inferred` `needs_human_review` | 若客户从试用转向持续付费且交付可标准化，收入可能具备扩张基础；该判断需由客户转化、收入质量和交付成本共同验证。 |
-| 不存在核心技术风险 | 绝对化且缺少技术测试 | `company_claim` `missing_evidence` | 当前仍存在性能复现、跨环境稳定性和重定制依赖等核心技术待验证事项。 |
-
-## 审计结论
-
-原文本存在证据边界越界和过度确定性，需要修订后再进入内部母稿。改写保留了投资判断，但明确区分公司口径、分析推断和待验证事项。
+| "NovaCompute has proven training efficiency leadership" | Overstates evidence | company_claim | "NovaCompute claims training efficiency advantages that require benchmark reproduction." |
+| "The customer pipeline validates demand" | Treats pipeline as verified demand | financial_snapshot + missing_evidence | "The fictional pipeline suggests potential demand, but paid usage and conversion still require verification." |
+| "The company is low risk" | Prohibited certainty | inferred | "The current materials identify several risks that require human review and follow-up diligence." |
 
 
-## 人工复核
+## Human Review
 
-以上内容是工作底稿示例，状态为 `needs_human_review`。投资团队应复核材料引用、判断边界、风险优先级和下一步动作。
+This output requires human review before use in any investment workpaper, diligence plan, committee discussion, founder feedback, or business decision process.

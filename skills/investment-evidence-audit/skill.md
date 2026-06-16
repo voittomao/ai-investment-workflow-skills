@@ -1,83 +1,85 @@
----
-name: investment-evidence-audit
-description: Use when an investment memo or analysis draft must be audited for unsupported claims, evidence-boundary violations, fabricated specificity, and prohibited decision language.
----
+# Investment Evidence Audit Skill
 
-# 投资分析证据边界审计
+## 1. Skill Objective
 
-## Skill 目标
+This skill is used to identify company claims, unsupported facts, overconfident wording, prohibited conclusions, missing evidence, and rewrite recommendations before an investment workpaper is circulated.
 
-审查投资分析文本中的事实、公司口径、访谈陈述、推断、投资观点和信息缺口，识别过度确定性、缺失引用、虚假精确、禁止性结论，并给出保留判断力度的改写建议。
+## 2. Suitable Use Cases
 
-## 适用场景
+Use this skill as the evidence boundary gate before sharing quick-look analysis, risk radar, DD question maps, or investment workpapers.
 
-- quick look memo、风险雷达或投资母稿准备内部流转前。
-- 模型输出内容较深，但需要检查是否越过证据边界。
-- 需要把宣传性或确定性表述改成可审阅的投资判断。
+## 3. Not Suitable For
 
-## 不适用场景
+Do not use it to make the analysis empty or evasive. The goal is disciplined, useful analysis, not a checklist with no judgment.
 
-- 不用于把所有观点删除成“信息不足”。
-- 不用于证明事实真伪；只能识别文本与现有证据是否匹配。
-- 不替代法律审阅、财务审计、事实核查或投委会审批。
+## 4. Input Requirements
 
-## 输入要求
+Inputs should be anonymized or permissioned, source-bounded, and limited to the minimum materials needed for the task:
 
-待审计文本、可用证据清单、材料引用、允许的判断边界和禁止性表述规则。
+- draft analysis
+- evidence labels if available
+- source summary
+- known missing materials
+- prohibited expression list
 
-执行前必须确认：资料授权范围、敏感等级、版本、提供方、已知缺口，以及哪些内容不能发送给外部系统。
+## 5. Output Requirements
 
-## 输出要求
+The output should be structured, evidence-aware, and usable by an investment, strategy, or diligence team:
 
-逐条陈述分类、证据标签、问题类型、风险等级、改写建议、所需证据和人工复核项，并给出整体审计结论。
+- evidence audit findings
+- claim classification
+- overstatement flags
+- prohibited conclusion flags
+- rewrite suggestions
+- human review required items
 
-输出必须区分：事实、公司单方口径、访谈陈述、分析推断、投资观点和信息缺口。
+## 6. Evidence Label Rules
 
-## 证据标签规则
+Use these labels:
 
-| 标签 | 含义 | 使用要求 |
-| --- | --- | --- |
-| `user_provided` | 用户直接提供的资料或说明 | 记录材料名称，不自动视为已核验事实 |
-| `company_claim` | 公司、创始人或 BP 的单方口径 | 必须标明“公司口径，待交叉验证” |
-| `interview_note` | 访谈纪要中的陈述 | 标明访谈对象、日期或版本；不能替代底层材料 |
-| `financial_snapshot` | 财务快照、管理报表或模型摘录 | 标明是否审计、口径和期间 |
-| `third_party_unverified` | 第三方材料但尚未复核 | 说明来源与未核验状态 |
-| `inferred` | 基于现有材料形成的分析推断 | 给出推断链和可能改变判断的条件 |
-| `missing_evidence` | 关键证据缺失 | 转化为材料请求或尽调问题 |
-| `needs_human_review` | 需要投资团队确认 | 不得自动升级为确定性结论 |
+- user_provided
+- company_claim
+- interview_note
+- financial_snapshot
+- third_party_unverified
+- inferred
+- missing_evidence
+- needs_human_review
 
+Never treat a `company_claim` as verified fact. Use `inferred` for analytical judgment and `missing_evidence` when a conclusion cannot be supported. Use `needs_human_review` before the output is circulated.
 
-同一陈述可以使用多个标签，但不得以 `needs_human_review` 掩盖缺失证据。
+## 7. Prohibited Wording
 
-## 禁止性表述
+Do not output investment recommendations, securities trading advice, legal advice, financial advice, tax advice, or deterministic conclusions. Do not invent customers, revenue, financing, valuation, technical metrics, transaction terms, or founder backgrounds.
 
-- 不得输出确定性投资推荐、绝对增长判断、验证完成声明或风险清零结论。
-- 不得把 `company_claim`、`interview_note` 或 `third_party_unverified` 改写为已核验事实。
-- 不得编造客户、收入、融资、财务、估值、技术性能、团队履历或交易条款。
-- 不得生成法律、财务、税务或投资决策意见；可提出需专业机构核验的事项。
-- 不得替代人工尽调、投资经理判断、投委会决策或项目状态路由。
-- 信息不足时必须写明“信息不足，需进一步尽调”，并给出下一步验证动作。
+Avoid wording that implies certainty when evidence is incomplete. Examples of prohibited conclusion patterns include unconditional outcome language, no-risk language, verified-growth language, automatic investment decisions, or final investment-call language.
 
+## 8. Process
 
-## 处理流程
+1. Scan for facts that lack support.
+2. Downgrade company claims that read like verified facts.
+3. Flag overconfident or prohibited wording.
+4. Preserve useful investor judgment while adding evidence boundaries.
+5. Produce concrete rewrites and final review notes.
 
-1. 把文本拆成可审计的事实陈述、推断和观点。
-2. 为每条陈述匹配证据引用与标签。
-3. 检查公司口径是否被写成事实、数字是否缺少期间和口径。
-4. 识别过度确定性、营销化、法律财务结论和自动决策语言。
-5. 改写时保留分析判断，同时补充边界和验证条件。
-6. 输出必须修正项、建议修正项和可保留项。
+## 9. Output Format
 
-## 输出格式
+Use Markdown tables or JSON-like structured sections. Every material claim should carry an evidence label or an explicit note that it needs human review.
 
-证据审计表 + 整体结论；每条至少含原文、分类、问题、改写和 required evidence。
+Core fields:
 
-优先使用短标题、表格和可执行 bullet；每个重要观点应包含证据边界和可能改变判断的条件。
+- finding_id
+- text_span
+- issue_type
+- evidence_label
+- risk
+- recommended_rewrite
+- human_review_required
 
-## 人工复核要求
+## 10. Human Review Requirement
 
-投资经理决定是否接受改写、补充证据或删除陈述；不得由审计 skill 自动确认事实或批准母稿。
+Human review is mandatory before the output is used in an investment workpaper, diligence plan, committee discussion, founder feedback, or business decision process.
 
-## 与 AI InvestOS 系统模块的对应关系
+## 11. AI InvestOS Module Mapping
 
-适用于项目本质、投资逻辑、亮点、风险、DD 和母稿的横向质量控制，是母稿输出前的 evidence boundary gate。
+This skill maps to: **Evidence boundary audit / quality gate**.

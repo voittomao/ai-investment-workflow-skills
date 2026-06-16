@@ -1,32 +1,13 @@
-# 核心待验证问题地图：质量检查清单
+# Quality Checklist: DD Question Map
 
-## 模块质量
-
-- [ ] 是否覆盖访谈、材料、数据、技术、客户、财务、法务交易和第三方。
-- [ ] 每项是否回连具体风险或投资逻辑。
-- [ ] 是否明确目标来源和 evidence needed。
-- [ ] 是否同时写出支持信号和推翻信号。
-- [ ] 是否避免把所有问题都交给创始人回答。
-- [ ] 是否检查权限、隐私和专业机构边界。
-
-## 证据纪律
-
-- [ ] 事实、公司口径、访谈、财务快照、第三方资料和推断已区分。
-- [ ] 没有把缺失证据写成已核验事实。
-- [ ] 没有编造客户、收入、融资、估值、技术性能或团队背景。
-- [ ] 关键判断写明了可能改变结论的条件。
-- [ ] 信息不足处已形成材料请求或 DD 问题。
-
-## 禁止性结论
-
-- [ ] 未输出确定性投资推荐或自动决策。
-- [ ] 未输出绝对化增长、验证完成或风险消失判断。
-- [ ] 未生成法律、财务、税务或投委会意见。
-- [ ] 明确保留人工尽调和人工确认。
-
-## 公开与隐私
-
-- [ ] 示例和测试数据均为虚构或充分脱敏。
-- [ ] 不包含 API key、密码、访问令牌或个人联系方式。
-- [ ] 不包含真实客户、真实融资、真实估值或真实交易条款。
-- [ ] 输出适合在授权范围内保存、分享或引用。
+- [ ] The output keeps the investor-style company research lens.
+- [ ] The input boundary is explicit.
+- [ ] All examples are fictional when used publicly.
+- [ ] Evidence labels are used consistently.
+- [ ] Company claims are not treated as verified facts.
+- [ ] Missing evidence is identified rather than invented.
+- [ ] The output includes what would change the view when relevant.
+- [ ] The output does not provide investment, legal, financial, tax, or securities trading advice.
+- [ ] The output does not make an automatic investment decision.
+- [ ] Human review is clearly required.
+- [ ] The output maps back to AI InvestOS module: Core validation issue map / DD execution.

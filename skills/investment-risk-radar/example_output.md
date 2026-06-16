@@ -1,20 +1,14 @@
-# 投资风险雷达：示例输出
+# Example Output: Investment Risk Radar
 
-## 公开样例声明
+All content below is fictional and for workflow demonstration only.
 
-NovaCompute 为完全虚构的 AI 训练平台样例公司。示例中的公司描述、材料、客户代号和全部业务数字均为虚构样例，不对应任何真实项目、客户、融资或交易。
-
-
-| 风险 | 来源回链 | 当前信号 | 为什么重要 | 优先动作 |
-| --- | --- | --- | --- | --- |
-| 软件价值可能被替代 | 独立软件价值、替代路线反方 | 缺少客户对照与迁移成本证据 | 若云工具、开源框架或自建方案已满足需求，持续付费基础可能不足 | 客户 reference；替代方案矩阵 |
-| 性能提升不可复现 | 技术亮点高估、证据缺口 | 仅有公司描述，缺少原始日志 | 技术效果若依赖特定环境，跨客户复制能力会下降 | 获取 benchmark 脚本与日志；独立复验 |
-| 收入质量被混合口径高估 | 商业模式逻辑、财务缺口 | 软件、实施和资源收入未拆分 | 可能误判毛利、可扩展性与现金消耗 | 合同、发票、回款和客户级收入勾稽 |
-| 交付依赖重定制 | 标准化亮点、CTO 访谈 | 缺少客户级工时与代码复用数据 | 人员线性增长会限制规模化 | 部署工时、支持工单和复用率分析 |
-
-以上风险均为待验证假设，不代表已形成事实判断。`inferred` `missing_evidence` `needs_human_review`
+| Risk | Linked logic | Signal | Evidence status | Priority | Verification action |
+| --- | --- | --- | --- | --- | --- |
+| Efficiency claim may be overstated | Training workflow differentiation | Benchmark context is incomplete | company_claim + missing_evidence | High | Reproduce benchmark with workload details |
+| Customer conversion may be weaker than pipeline implies | Budget pull | Pipeline is not the same as paid usage | financial_snapshot + missing_evidence | High | Reconcile contract, invoice, cash, and usage |
+| Services intensity may dilute software economics | Business model quality | Deployment effort is unclear | interview_note | Medium | Review delivery hours and support tickets |
 
 
-## 人工复核
+## Human Review
 
-以上内容是工作底稿示例，状态为 `needs_human_review`。投资团队应复核材料引用、判断边界、风险优先级和下一步动作。
+This output requires human review before use in any investment workpaper, diligence plan, committee discussion, founder feedback, or business decision process.

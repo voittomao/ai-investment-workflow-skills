@@ -1,35 +1,23 @@
-# 新增资料后的版本化研判更新：示例输出
+# Example Output: Versioned Investment Update
 
-## 公开样例声明
+All content below is fictional and for workflow demonstration only.
 
-NovaCompute 为完全虚构的 AI 训练平台样例公司。示例中的公司描述、材料、客户代号和全部业务数字均为虚构样例，不对应任何真实项目、客户、融资或交易。
+## Version Change
 
-
-## 资料成熟度变化
-
-**V1：单一来源初步分析 → V2：多来源初步研判，仍待交叉验证。**
-
-新增材料扩大了可分析范围，但 CTO、CFO 访谈仍属于公司侧口径，财务快照未经审计，客户管线样表不能替代合同、付款和实际使用数据。
-
-## 判断变化
-
-| 主题 | V1 | V2 变化 | 当前状态 |
+| Area | V1 BP-only view | V2 new-material view | Change |
 | --- | --- | --- | --- |
-| 技术架构完整性 | 仅有产品概览 | CTO 访谈补充了调度流程和交付依赖 | 被强化，但仍需日志复验 |
-| 软件收入独立性 | 无法判断 | 财务快照显示存在软件、服务和资源混合口径 | 原判断被削弱，新增收入质量风险 |
-| 客户转化 | 仅有 BP 描述 | 管线样表补充阶段信息 | 信息增加，但真实性与付款仍待核验 |
+| Material maturity | Single BP, source-limited | BP plus fictional CFO/CTO notes and sample pipeline | Stronger context, still needs verification |
+| Training efficiency | Company claim only | Claim plus technical discussion | Strengthened but not verified |
+| Revenue quality | Not assessable | Fictional snapshot creates testable questions | New diligence workstream |
 
-## 风险与 DD 更新
+## Still to Verify
 
-- **新增风险**：管理报表口径可能混合软件、实施和资源收入。
-- **已缓解风险**：技术流程完全不清楚的风险有所缓解，但性能复现风险未关闭。
-- **仍待核验**：客户实际使用、合同付款、续费、交付工时和 benchmark 原始日志。
-
-## 母稿更新建议
-
-在“商业模式与单位经济”中新增收入拆分问题；在“技术与产品”中补充 CTO 口径并保留复验边界；不要删除 V1 的替代路线反方假设。
+- Customer willingness to pay and renewal behavior.
+- Benchmark reproducibility.
+- Delivery effort and support intensity.
+- Transaction terms and cap table details.
 
 
-## 人工复核
+## Human Review
 
-以上内容是工作底稿示例，状态为 `needs_human_review`。投资团队应复核材料引用、判断边界、风险优先级和下一步动作。
+This output requires human review before use in any investment workpaper, diligence plan, committee discussion, founder feedback, or business decision process.

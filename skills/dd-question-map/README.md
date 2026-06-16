@@ -1,31 +1,38 @@
-# 核心待验证问题地图
+# DD Question Map
 
-`dd-question-map` 是一项一级市场投研 workflow skill，用于：从风险和核心待验证事项生成完整 DD 问题地图，明确问谁、查什么、需要什么证据、什么结果支持或推翻判断，以及下一步如何处理。
+Convert risks into executable diligence questions, material requests, data checks, and expert validation.
 
-## 何时使用
+[中文镜像 / Chinese mirror](zh-CN/README.md)
 
-- 准备管理层、技术、客户、财务或专家尽调。
-- 需要把访谈问题、材料请求和数据核验放入同一地图。
-- 需要保证 DD 工作能回连投资逻辑和风险。
+## When to Use
 
-## 文件说明
+Use this skill when a team needs to move from investor-style risk thinking to actionable diligence execution.
 
-| 文件 | 用途 |
-| --- | --- |
-| `skill.md` | 完整工作流指令、证据纪律和人工复核要求 |
-| `input_contract.md` | 可接受输入、最小字段和敏感边界 |
-| `output_schema.md` | 结构化输出合同 |
-| `example_input.md` | NovaCompute 虚构样例输入 |
-| `example_output.md` | 克制、可审阅的虚构样例输出 |
-| `quality_checklist.md` | 运行后质量检查 |
+## What It Produces
 
-## 快速使用
+- DD issue map
+- question or task
+- target source
+- evidence needed
+- supporting signal
+- breaking signal
+- material request
+- priority
+- expected next action
 
-1. 先阅读 `input_contract.md`，确认输入边界。
-2. 按 `skill.md` 执行工作流。
-3. 用 `output_schema.md` 组织结果。
-4. 用 `quality_checklist.md` 做人工复核。
+## Evidence Discipline
 
-## 边界
+This skill must separate facts, company claims, interview notes, financial snapshots, analytical inferences, missing evidence, and items that need human review.
 
-该 skill 辅助组织投资判断，不提供投资决策、法律、财务或税务意见，也不替代人工尽调。
+## AI InvestOS Module Mapping
+
+Core validation issue map / DD execution
+
+## Files
+
+- [`skill.md`](skill.md)
+- [`input_contract.md`](input_contract.md)
+- [`output_schema.md`](output_schema.md)
+- [`example_input.md`](example_input.md)
+- [`example_output.md`](example_output.md)
+- [`quality_checklist.md`](quality_checklist.md)

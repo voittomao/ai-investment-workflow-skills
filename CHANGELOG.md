@@ -1,24 +1,13 @@
 # Changelog
 
-## v0.1.0 - 2026-06-16
+## v0.1.1
 
-首次公开候选版本。
+- Adds English canonical documentation for the full six-skill workflow.
+- Preserves the original Chinese content as a `zh-CN` mirror.
+- Clarifies that the workflow is designed for investor-style company research, business model understanding, diligence planning, versioned updates, and evidence review.
+- Keeps all examples fictional and evidence-disciplined.
 
-### Added
+## v0.1.0
 
-- 项目资料分诊 `source-material-triage`
-- 一级市场项目初判 `primary-market-quick-look`
-- 投资风险雷达 `investment-risk-radar`
-- 核心待验证问题地图 `dd-question-map`
-- 新增资料后的版本化研判更新 `versioned-investment-update`
-- 投资分析证据边界审计 `investment-evidence-audit`
-- NovaCompute 端到端虚构案例
-- 发布检查表与贡献指南
-
-### Principles
-
-- 以投资分析母稿为主线。
-- 区分事实、公司口径、访谈、财务快照、推断和信息缺口。
-- 保留反方假设、风险回链和人工复核。
-- 不包含真实项目、客户、融资或交易数据。
-
+- Initial public release of six evidence-disciplined workflow skills for investor-style company research and primary-market diligence.
+- Includes source material triage, quick-look analysis, risk mapping, DD question design, versioned investment updates, evidence review, and a fully fictional NovaCompute end-to-end example.

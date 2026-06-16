@@ -1,8 +1,30 @@
-# 新增资料后的版本化研判更新：示例输入
+# Example Input: Versioned Investment Update
 
-## 公开样例声明
+All content below is fictional and uses the sample company NovaCompute.
 
-NovaCompute 为完全虚构的 AI 训练平台样例公司。示例中的公司描述、材料、客户代号和全部业务数字均为虚构样例，不对应任何真实项目、客户、融资或交易。
+## Case
 
+- Company: NovaCompute
+- Context: Fictional AI training platform sample company
+- Material boundary: Fictional examples only; not real customer, financing, revenue, valuation, or transaction data
+- Human review status: needs_human_review
 
-NovaCompute（虚构样例）V1 仅包含 BP 和产品概览。V2 新增 CTO、CFO 访谈纪要、未经审计财务快照和虚构客户管线样表。全部材料、客户代号和业务数字均为虚构样例。
+## Task
+
+Update NovaCompute from V1 BP-only analysis to V2 after fictional CFO notes, CTO notes, and sample customer pipeline data.
+
+## Available Materials
+
+- Fictional BP summary: `company_claim`
+- Fictional product architecture note: `user_provided`
+- Fictional CFO interview note: `interview_note`
+- Fictional revenue snapshot: `financial_snapshot`
+- Fictional market note from an analyst: `inferred`
+- Missing customer reference calls: `missing_evidence`
+
+## Constraints
+
+- Do not provide an investment recommendation.
+- Do not treat company claims as verified facts.
+- Mark all example numbers as fictional examples.
+- Identify what still needs human review.

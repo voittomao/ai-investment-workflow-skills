@@ -1,83 +1,84 @@
----
-name: source-material-triage
-description: Use when a primary-market project has mixed source materials that must be classified, bounded, and checked for maturity before investment analysis begins.
----
+# Source Material Triage Skill
 
-# 项目资料分诊
+## 1. Skill Objective
 
-## Skill 目标
+This skill is used to classify BP, interview notes, financial snapshots, customer lists, product materials, transaction files, and supplemental documents by material type, maturity, evidence boundary, and missing follow-up materials.
 
-识别 BP、访谈纪要、财务表、客户清单、产品材料和交易材料的角色、成熟度、可用范围、证据边界、相互矛盾和缺失项，为项目本质研判与投资分析母稿建立可靠输入层。
+## 2. Suitable Use Cases
 
-## 适用场景
+Use this skill before any quick-look analysis or investment workpaper drafting, especially when the material package is uneven, source-limited, or mixed across company claims, interview notes, and internal analyst notes.
 
-- 首次收到项目资料，需要判断“现在能分析到什么程度”。
-- 资料来自多个角色或版本，需要识别口径冲突与重复材料。
-- 准备 quick look memo 前，需要形成资料清单、成熟度判断和补件计划。
+## 3. Not Suitable For
 
-## 不适用场景
+Do not use it to produce an investment view, make a go/no-go judgment, or infer missing customer, revenue, financing, valuation, technical, legal, or transaction facts.
 
-- 不用于直接给出投资结论或 Level 路由。
-- 不用于替代财务审计、法律尽调、技术测试或客户访谈。
-- 不用于处理未经授权的真实敏感资料或公开传播原始文件。
+## 4. Input Requirements
 
-## 输入要求
+Inputs should be anonymized or permissioned, source-bounded, and limited to the minimum materials needed for the task:
 
-材料文件名、材料类型、提供方、日期或版本、可公开程度、摘要或脱敏摘录；不得默认上传完整真实项目资料。
+- project name or anonymized case label
+- list of available materials
+- short excerpts or summaries
+- source date and source owner if known
+- known confidentiality boundary
 
-执行前必须确认：资料授权范围、敏感等级、版本、提供方、已知缺口，以及哪些内容不能发送给外部系统。
+## 5. Output Requirements
 
-## 输出要求
+The output should be structured, evidence-aware, and usable by an investment, strategy, or diligence team:
 
-材料清单、材料角色、资料成熟度、可使用范围、证据标签、冲突项、缺失材料、分析边界和下一步动作。
+- material inventory
+- material type classification
+- material maturity assessment
+- usable evidence boundary
+- missing material list
+- human review notes
 
-输出必须区分：事实、公司单方口径、访谈陈述、分析推断、投资观点和信息缺口。
+## 6. Evidence Label Rules
 
-## 证据标签规则
+Use these labels:
 
-| 标签 | 含义 | 使用要求 |
-| --- | --- | --- |
-| `user_provided` | 用户直接提供的资料或说明 | 记录材料名称，不自动视为已核验事实 |
-| `company_claim` | 公司、创始人或 BP 的单方口径 | 必须标明“公司口径，待交叉验证” |
-| `interview_note` | 访谈纪要中的陈述 | 标明访谈对象、日期或版本；不能替代底层材料 |
-| `financial_snapshot` | 财务快照、管理报表或模型摘录 | 标明是否审计、口径和期间 |
-| `third_party_unverified` | 第三方材料但尚未复核 | 说明来源与未核验状态 |
-| `inferred` | 基于现有材料形成的分析推断 | 给出推断链和可能改变判断的条件 |
-| `missing_evidence` | 关键证据缺失 | 转化为材料请求或尽调问题 |
-| `needs_human_review` | 需要投资团队确认 | 不得自动升级为确定性结论 |
+- user_provided
+- company_claim
+- interview_note
+- financial_snapshot
+- third_party_unverified
+- inferred
+- missing_evidence
+- needs_human_review
 
+Never treat a `company_claim` as verified fact. Use `inferred` for analytical judgment and `missing_evidence` when a conclusion cannot be supported. Use `needs_human_review` before the output is circulated.
 
-同一陈述可以使用多个标签，但不得以 `needs_human_review` 掩盖缺失证据。
+## 7. Prohibited Wording
 
-## 禁止性表述
+Do not output investment recommendations, securities trading advice, legal advice, financial advice, tax advice, or deterministic conclusions. Do not invent customers, revenue, financing, valuation, technical metrics, transaction terms, or founder backgrounds.
 
-- 不得输出确定性投资推荐、绝对增长判断、验证完成声明或风险清零结论。
-- 不得把 `company_claim`、`interview_note` 或 `third_party_unverified` 改写为已核验事实。
-- 不得编造客户、收入、融资、财务、估值、技术性能、团队履历或交易条款。
-- 不得生成法律、财务、税务或投资决策意见；可提出需专业机构核验的事项。
-- 不得替代人工尽调、投资经理判断、投委会决策或项目状态路由。
-- 信息不足时必须写明“信息不足，需进一步尽调”，并给出下一步验证动作。
+Avoid wording that implies certainty when evidence is incomplete. Examples of prohibited conclusion patterns include unconditional outcome language, no-risk language, verified-growth language, automatic investment decisions, or final investment-call language.
 
+## 8. Process
 
-## 处理流程
+1. Inventory the materials without adding facts.
+2. Assign material categories and evidence labels.
+3. Separate verified facts, company claims, interview notes, financial snapshots, and missing evidence.
+4. Assess whether the package supports quick-look analysis, risk mapping, or only preliminary triage.
+5. Create a concrete request list for missing materials.
 
-1. 建立材料 inventory，不先做项目好坏判断。
-2. 按公司基础、产品技术、商业客户、财务、访谈、法务交易和第三方材料分类。
-3. 为每项材料标注证据标签、期间、版本和可用范围。
-4. 检查材料间的数字、客户阶段、产品能力和融资口径是否一致。
-5. 形成资料成熟度和 judgment boundary。
-6. 把缺口转化为明确的补件请求，并交给项目初判模块。
+## 9. Output Format
 
-## 输出格式
+Use Markdown tables or JSON-like structured sections. Every material claim should carry an evidence label or an explicit note that it needs human review.
 
-Markdown 表格或结构化 JSON；至少包含 `material_inventory`、`maturity_assessment`、`conflicts`、`missing_materials` 和 `judgment_boundary`。
+Core fields:
 
-优先使用短标题、表格和可执行 bullet；每个重要观点应包含证据边界和可能改变判断的条件。
+- case_name
+- material_maturity
+- materials
+- evidence_boundary
+- missing_materials
+- human_review_required
 
-## 人工复核要求
+## 10. Human Review Requirement
 
-投资团队确认材料授权范围、敏感等级、资料版本、冲突解释和是否允许进入后续分析。机器不得自行扩大材料用途。
+Human review is mandatory before the output is used in an investment workpaper, diligence plan, committee discussion, founder feedback, or business decision process.
 
-## 与 AI InvestOS 系统模块的对应关系
+## 11. AI InvestOS Module Mapping
 
-资料分诊 / 资料成熟度 → 项目本质研判。输出是 AI InvestOS 投资分析母稿主链路的输入合同。
+This skill maps to: **Source triage / material maturity**.

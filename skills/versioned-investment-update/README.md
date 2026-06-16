@@ -1,31 +1,37 @@
-# 新增资料后的版本化研判更新
+# Versioned Investment Update
 
-`versioned-investment-update` 是一项一级市场投研 workflow skill，用于：新增资料后保留历史判断，输出被强化、被削弱、新增或缓解的风险、已关闭和仍待核验事项，并提出新版投资分析母稿的更新建议。
+Explain how new materials change the prior view instead of overwriting the old report.
 
-## 何时使用
+[中文镜像 / Chinese mirror](zh-CN/README.md)
 
-- 项目从 BP-only 进入多资料初步研判。
-- 新增财务快照、客户数据、技术材料或访谈纪要后更新判断。
-- 团队需要理解“为什么判断变了”，而非只看新版本全文。
+## When to Use
 
-## 文件说明
+Use this skill when a BP-only quick look is updated with new financial snapshots, interview notes, customer materials, or technical documents.
 
-| 文件 | 用途 |
-| --- | --- |
-| `skill.md` | 完整工作流指令、证据纪律和人工复核要求 |
-| `input_contract.md` | 可接受输入、最小字段和敏感边界 |
-| `output_schema.md` | 结构化输出合同 |
-| `example_input.md` | NovaCompute 虚构样例输入 |
-| `example_output.md` | 克制、可审阅的虚构样例输出 |
-| `quality_checklist.md` | 运行后质量检查 |
+## What It Produces
 
-## 快速使用
+- version change summary
+- material maturity change
+- strengthened views
+- weakened views
+- new risks
+- de-risked items
+- still-to-verify items
+- workpaper update recommendations
 
-1. 先阅读 `input_contract.md`，确认输入边界。
-2. 按 `skill.md` 执行工作流。
-3. 用 `output_schema.md` 组织结果。
-4. 用 `quality_checklist.md` 做人工复核。
+## Evidence Discipline
 
-## 边界
+This skill must separate facts, company claims, interview notes, financial snapshots, analytical inferences, missing evidence, and items that need human review.
 
-该 skill 辅助组织投资判断，不提供投资决策、法律、财务或税务意见，也不替代人工尽调。
+## AI InvestOS Module Mapping
+
+Versioned update / judgment change tracking
+
+## Files
+
+- [`skill.md`](skill.md)
+- [`input_contract.md`](input_contract.md)
+- [`output_schema.md`](output_schema.md)
+- [`example_input.md`](example_input.md)
+- [`example_output.md`](example_output.md)
+- [`quality_checklist.md`](quality_checklist.md)
