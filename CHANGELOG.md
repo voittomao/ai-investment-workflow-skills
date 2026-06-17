@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+
+### Added
+- Quick Start guidance for using skills with AI assistants, Codex, and local file-based workflows.
+- Executive Snapshot section for primary-market quick-look outputs.
+- Recommended next workflow step guidance across skills.
+- Lightweight source_id guidance for evidence references.
+
+### Changed
+- Clarified that CLI examples are conceptual wrappers, not built-in production commands.
+- Strengthened human review and evidence boundary language.
+
 ## v0.1.1
 
 - Adds English canonical documentation for the full six-skill workflow.

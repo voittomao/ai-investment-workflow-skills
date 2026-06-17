@@ -22,6 +22,16 @@ This is a fully fictional example showing how the six workflow skills can work t
 
 ## 2. Primary-Market Quick-Look
 
+## Executive Snapshot / 5-minute brief
+
+- **One-sentence project essence:** NovaCompute is a fictional AI training workflow platform that claims to improve training orchestration and resource efficiency. `inferred`
+- **Workflow status:** ready for risk radar; needs more materials before DD question map. `inferred`
+- **Current material maturity:** Fictional BP-style materials plus limited notes; suitable for a quick-look demo, not a decision-ready workpaper. `missing_evidence`
+- **3 preliminary highlights:** Clear operational pain point, claimed benchmark improvement, and early fictional customer interest. `company_claim`
+- **3 key risks / counter-hypotheses:** Benchmark claims may not reproduce, cloud-native tools may be good enough, and services work may dilute software economics. `inferred`
+- **3 next verification priorities:** Reproduce benchmarks, validate real usage, and separate subscription revenue from services or resale. `missing_evidence`
+- **Recommended next skill to run:** `investment-risk-radar`, then `dd-question-map` if diligence execution is needed.
+
 **Purpose:** Create a first-pass investor-style view of a company without overstating the evidence.
 
 **Fictional input:** NovaCompute provides a fictional BP, fictional product note, fictional CFO/CTO notes, and fictional sample pipeline data. All figures are fictional examples.
@@ -73,3 +83,7 @@ This is a fully fictional example showing how the six workflow skills can work t
 ## End State
 
 The final artifact is an investment analysis workpaper draft that remains source-bounded, evidence-labeled, and subject to human review. It does not decide whether to invest and does not replace professional diligence or investment committee review.
+
+## Recommended next workflow step
+
+After this end-to-end demo, teams can rerun the relevant skill rather than the full chain. For example, run `investment-risk-radar` when risk profile changes, `versioned-investment-update` when new materials arrive, and `investment-evidence-audit` before circulation.

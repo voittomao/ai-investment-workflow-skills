@@ -10,4 +10,12 @@
 - [ ] The output does not provide investment, legal, financial, tax, or securities trading advice.
 - [ ] The output does not make an automatic investment decision.
 - [ ] Human review is clearly required.
+- [ ] The output includes a recommended next workflow step, if applicable, without implying an automatic investment decision.
 - [ ] The output maps back to AI InvestOS module: Risk radar / risk mapping.
+
+
+## Recommended Next Workflow Step
+
+- [ ] Recommended next workflow step: `dd-question-map`, if the team is ready to convert risk hypotheses into diligence questions and material requests.
+- [ ] The next step is framed as optional or conditional, not automatic.
+- [ ] The next step does not imply an investment recommendation or investment committee decision.

@@ -81,3 +81,8 @@ description: Use when investment logic, highlights, and evidence gaps must be co
 ## 与 AI InvestOS 系统模块的对应关系
 
 投资逻辑 / 亮点 / 反方 / 证据缺口 → 风险雷达 → 核心待验证问题地图。
+
+
+## Source References / 来源引用
+
+如条件允许，可用轻量 `source_id` 标注来源，例如文件名、页码、章节、访谈日期或表格 tab。若无法确认来源位置，不得编造 source_id。

@@ -31,6 +31,16 @@
 
 ## 02 `primary-market-quick-look`
 
+## Executive Snapshot / 5-minute brief
+
+- **一句话项目本质：** NovaCompute 是完全虚构的 AI 训练 workflow 平台样例，主张提升训练编排和资源效率。`inferred`
+- **Workflow status：** ready for risk radar；needs more materials before DD question map。`inferred`
+- **当前材料成熟度：** 仅有虚构 BP 式材料和有限说明，适合 quick-look demo，不适合作为决策级工作底稿。`missing_evidence`
+- **3 个初步亮点：** 问题定义清晰、存在 benchmark 提升主张、虚构材料中出现早期客户兴趣。`company_claim`
+- **3 个关键风险 / 反方假设：** benchmark 可能难以复现、云厂商工具可能足够、服务交付可能稀释软件经济性。`inferred`
+- **3 个下一步验证重点：** 复现实验、验证真实使用、拆分订阅收入与服务或资源转售。`missing_evidence`
+- **推荐的下一步 skill：** 先运行 `investment-risk-radar`；如需进入尽调执行，再运行 `dd-question-map`。
+
 ### 项目本质
 
 NovaCompute 的核心命题不是 AI 基础设施市场是否增长，而是其调度软件能否在云工具、开源方案和客户自建系统之外，形成可复现、可持续付费且不依赖重实施的独立软件价值。`inferred`
@@ -139,3 +149,7 @@ NovaCompute 的核心命题不是 AI 基础设施市场是否增长，而是其�
 ```
 
 这也是 AI InvestOS 与一次性模型问答的主要区别：输出不是终点，而是可版本化、可回链、需要人工确认的投研工作流。
+
+## 推荐的下一步 workflow
+
+端到端示例之后，团队可按需要重跑相关 skill，而不是机械运行全链路。例如风险画像变化时运行 `investment-risk-radar`，新资料进入后运行 `versioned-investment-update`，材料流转前运行 `investment-evidence-audit`。

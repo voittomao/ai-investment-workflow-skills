@@ -81,3 +81,8 @@ description: Use when an investment memo or analysis draft must be audited for u
 ## 与 AI InvestOS 系统模块的对应关系
 
 适用于项目本质、投资逻辑、亮点、风险、DD 和母稿的横向质量控制，是母稿输出前的 evidence boundary gate。
+
+
+## Source References / 来源引用
+
+如条件允许，可用轻量 `source_id` 标注来源，例如文件名、页码、章节、访谈日期或表格 tab。若无法确认来源位置，不得编造 source_id。

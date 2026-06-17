@@ -10,16 +10,24 @@ Use this schema as a reference shape. It is intentionally lightweight so teams c
     "all_examples_are_fictional": true,
     "requires_human_review": true
   },
+  "source_references": [
+    {
+      "source_id": "...",
+      "evidence_label": "...",
+      "note": "..."
+    }
+  ],
   "output": {
-    "dd_id": "..."
-    "dd_category": "..."
-    "dd_type": "..."
-    "question_or_task": "..."
-    "target_source": "..."
-    "linked_risk": "..."
-    "evidence_needed": "..."
-    "support_signal": "..."
-    "break_signal": "..."
+    "recommended_next_workflow_step": "...",
+    "dd_id": "...",
+    "dd_category": "...",
+    "dd_type": "...",
+    "question_or_task": "...",
+    "target_source": "...",
+    "linked_risk": "...",
+    "evidence_needed": "...",
+    "support_signal": "...",
+    "break_signal": "...",
     "priority": "..."
   },
   "quality_flags": [
@@ -27,6 +35,16 @@ Use this schema as a reference shape. It is intentionally lightweight so teams c
   ]
 }
 ```
+
+## Optional Source References
+
+`source_references` is optional. Use it when lightweight references are available, such as a filename, page number, section title, interview date, or spreadsheet tab. Do not require every output item to have a `source_id`, and do not fabricate source IDs when the source location is unavailable.
+
+## Recommended Next Workflow Step
+
+Recommended next workflow step: `versioned-investment-update` after new materials arrive, or `investment-evidence-audit` before circulating a workpaper.
+
+This is a workflow suggestion only. Do not force the next skill to run when the available evidence or user intent does not support it, and do not frame the workflow step as an investment decision.
 
 ## Field Rules
 

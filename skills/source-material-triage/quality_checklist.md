@@ -10,4 +10,12 @@
 - [ ] The output does not provide investment, legal, financial, tax, or securities trading advice.
 - [ ] The output does not make an automatic investment decision.
 - [ ] Human review is clearly required.
+- [ ] The output includes a recommended next workflow step, if applicable, without implying an automatic investment decision.
 - [ ] The output maps back to AI InvestOS module: Source triage / material maturity.
+
+
+## Recommended Next Workflow Step
+
+- [ ] Recommended next workflow step: `primary-market-quick-look`, if the material package is usable enough for a first-pass company view.
+- [ ] The next step is framed as optional or conditional, not automatic.
+- [ ] The next step does not imply an investment recommendation or investment committee decision.

@@ -26,6 +26,7 @@ Inputs should be anonymized or permissioned, source-bounded, and limited to the 
 
 The output should be structured, evidence-aware, and usable by an investment, strategy, or diligence team:
 
+- Executive Snapshot / 5-minute brief
 - one-paragraph quick look
 - project essence
 - investment logic
@@ -48,6 +49,8 @@ Use these labels:
 - missing_evidence
 - needs_human_review
 
+When available, cite source references using a lightweight `source_id` such as filename, page number, section title, interview date, or spreadsheet tab. Do not fabricate source IDs when the source location is unavailable.
+
 Never treat a `company_claim` as verified fact. Use `inferred` for analytical judgment and `missing_evidence` when a conclusion cannot be supported. Use `needs_human_review` before the output is circulated.
 
 ## 7. Prohibited Wording
@@ -57,6 +60,8 @@ Do not output investment recommendations, securities trading advice, legal advic
 Avoid wording that implies certainty when evidence is incomplete. Examples of prohibited conclusion patterns include unconditional outcome language, no-risk language, verified-growth language, automatic investment decisions, or final investment-call language.
 
 ## 8. Process
+
+Start with an **Executive Snapshot / 5-minute brief** that includes one-sentence project essence, `workflow_status`, current material maturity, three preliminary highlights, three key risks or counter-hypotheses, three next verification priorities, and the recommended next skill to run. `workflow_status` describes only workflow readiness, such as `source-limited quick look`, `ready for risk radar`, `needs more materials before DD question map`, or `ready for evidence audit before circulation`; it must not express an investment recommendation.
 
 1. Start with what the company appears to be and why it matters.
 2. Separate business model understanding from investment view.
@@ -70,6 +75,7 @@ Use Markdown tables or JSON-like structured sections. Every material claim shoul
 
 Core fields:
 
+- executive_snapshot
 - project_essence
 - business_model
 - investment_logic

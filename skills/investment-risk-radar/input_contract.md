@@ -8,6 +8,10 @@
 - evidence gaps
 - material conflicts if any
 
+## Source References
+
+When available, cite source references using a lightweight `source_id` such as filename, page number, section title, interview date, or spreadsheet tab. Do not fabricate source IDs when the source location is unavailable.
+
 ## Accepted Evidence Labels
 
 - user_provided

@@ -46,16 +46,26 @@ Commercial and business model understanding are core objects inside the investme
 
 ## Recommended Starting Points
 
-1. [`primary-market-quick-look`](skills/primary-market-quick-look/README.md)  
+Recommended first run:
+
+1. [`primary-market-quick-look`](skills/primary-market-quick-look/README.md)
    Reason: the best starting point for understanding how to analyze a company through an investment research lens.
 
-2. [`investment-risk-radar`](skills/investment-risk-radar/README.md)  
+2. [`investment-risk-radar`](skills/investment-risk-radar/README.md)
    Reason: converts highlights, assumptions, and evidence gaps into risk hypotheses and verification actions.
 
-3. [`versioned-investment-update`](skills/versioned-investment-update/README.md)  
-   Reason: shows the core workflow difference: new materials should update and explain judgment changes instead of simply overwriting the prior report.
+3. [`dd-question-map`](skills/dd-question-map/README.md)
+   Reason: turns risk hypotheses into diligence questions, material requests, data checks, technical validation, customer references, and transaction review.
 
-`dd-question-map` remains the execution layer that turns risks into interview questions, material requests, data checks, technical validation, customer references, and transaction review. `investment-evidence-audit` remains the evidence boundary gate before an investment workpaper is circulated.
+When new materials arrive:
+
+- [`versioned-investment-update`](skills/versioned-investment-update/README.md)
+  Reason: preserves V1/V2 judgment changes instead of simply overwriting the prior report.
+
+Before circulating a workpaper:
+
+- [`investment-evidence-audit`](skills/investment-evidence-audit/README.md)
+  Reason: checks evidence boundaries, overstatement risk, and required human review before circulation.
 
 ## Workflow
 
@@ -79,6 +89,44 @@ flowchart LR
 | [`dd-question-map`](skills/dd-question-map/README.md) | Diligence execution map | Interview questions, material requests, data checks, technical and transaction validation |
 | [`versioned-investment-update`](skills/versioned-investment-update/README.md) | Update analysis after new materials | V1/V2 judgment change summary |
 | [`investment-evidence-audit`](skills/investment-evidence-audit/README.md) | Evidence boundary quality gate | Overstatement flags and rewrite suggestions |
+
+## Quick Start / How to Use
+
+These skills do not require a full system to try. A user can copy a skill's `skill.md`, `input_contract.md`, `output_schema.md`, and `quality_checklist.md` into an AI assistant together with desensitized company materials.
+
+Recommended first run:
+
+1. `primary-market-quick-look`
+2. `investment-risk-radar`
+3. `dd-question-map`
+
+When new materials arrive:
+
+- `versioned-investment-update`
+
+Before circulating a workpaper:
+
+- `investment-evidence-audit`
+
+For a more technical workflow, users may keep skills and project materials in local directories and invoke a selected skill through Codex or a script-like wrapper.
+
+Pseudo-command only; this repository does not include a built-in production CLI.
+
+Example pattern:
+
+```bash
+run-skill primary-market-quick-look \
+  --project ./projects/demo-company \
+  --out ./outputs/demo-company/quick_look_v1.md
+```
+
+The command above is an illustrative CLI pattern, not a real command shipped by this repo.
+
+## Using with Codex or Local File-Based Workflows
+
+The skills define workflow contracts: what inputs are acceptable, how evidence should be labeled, what outputs should contain, and which claims require human review. Codex or similar AI coding agents can read local skill files and desensitized project materials, organize context, and generate Markdown workpapers.
+
+Humans remain responsible for review, judgment, follow-up questions, and any business or investment decision. This repository does not include production orchestration code, model integrations, API connectors, or a built-in CLI.
 
 ## Evidence Labels
 

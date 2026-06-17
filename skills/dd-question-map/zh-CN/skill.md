@@ -81,3 +81,8 @@ DD issue map 表格或 JSON；页面按一级类别展示，细分 `dd_type` 用
 ## 与 AI InvestOS 系统模块的对应关系
 
 风险雷达 → 核心待验证问题地图 → 材料请求 / 访谈提纲 / 投资分析母稿更新。
+
+
+## Source References / 来源引用
+
+如条件允许，可用轻量 `source_id` 标注来源，例如文件名、页码、章节、访谈日期或表格 tab。若无法确认来源位置，不得编造 source_id。

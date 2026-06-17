@@ -81,3 +81,8 @@ Markdown 表格或结构化 JSON；至少包含 `material_inventory`、`maturity
 ## 与 AI InvestOS 系统模块的对应关系
 
 资料分诊 / 资料成熟度 → 项目本质研判。输出是 AI InvestOS 投资分析母稿主链路的输入合同。
+
+
+## Source References / 来源引用
+
+如条件允许，可用轻量 `source_id` 标注来源，例如文件名、页码、章节、访谈日期或表格 tab。若无法确认来源位置，不得编造 source_id。

@@ -29,6 +29,8 @@ description: Use when a primary-market investor needs a disciplined quick-look j
 
 ## 输出要求
 
+输出开头应包含 **Executive Snapshot / 5-minute brief**：一句话项目本质、`workflow_status`、当前材料成熟度、3 个初步亮点、3 个关键风险/反方假设、3 个下一步验证重点，以及推荐的下一步 skill。`workflow_status` 只能描述工作流状态，例如 `source-limited quick look`、`ready for risk radar`、`needs more materials before DD question map` 或 `ready for evidence audit before circulation`，不能表达投资建议。
+
 项目本质、一句话判断、投资逻辑、项目亮点、反方假设、核心风险、证据缺口、判断边界和下一步验证优先级。
 
 输出必须区分：事实、公司单方口径、访谈陈述、分析推断、投资观点和信息缺口。
@@ -81,3 +83,8 @@ Markdown memo 或结构化 JSON；默认先给一句话判断，再展开逻辑�
 ## 与 AI InvestOS 系统模块的对应关系
 
 项目本质研判 → 投资逻辑分析 → 项目亮点分析 → 反方假设 / 核心挑战 → 证据缺口。
+
+
+## Source References / 来源引用
+
+如条件允许，可用轻量 `source_id` 标注来源，例如文件名、页码、章节、访谈日期或表格 tab。若无法确认来源位置，不得编造 source_id。

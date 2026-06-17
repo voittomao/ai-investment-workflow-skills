@@ -62,17 +62,61 @@ flowchart LR
 | 05 | [versioned-investment-update](skills/versioned-investment-update/README.md) | 新资料到来后，判断发生了什么变化？ | V1/V2 强化、削弱、新增风险和母稿更新建议 |
 | 06 | [investment-evidence-audit](skills/investment-evidence-audit/README.md) | 文本是否越过了证据边界？ | 逐条审计、改写建议、所需证据和人工复核项 |
 
-## 推荐先看的 3 个 Skills
+## Quick Start / 如何使用
+
+这组 skills 不必接入完整系统。可以把某个 skill 的 `skill.md`、`input_contract.md`、`output_schema.md` 和 `quality_checklist.md` 与脱敏项目材料一起交给 AI 助手使用。
+
+推荐首次试用顺序：
+
+1. `primary-market-quick-look`
+2. `investment-risk-radar`
+3. `dd-question-map`
+
+新资料到来后：
+
+- `versioned-investment-update`
+
+正式流转前：
+
+- `investment-evidence-audit`
+
+如果需要更技术化的使用方式，也可以把 skills 和项目材料放入本地目录，作为 workflow contracts，通过 Codex 或命令行式 wrapper 调用指定 skill。
+
+以下仅为伪命令 / 概念性 wrapper 示例；本仓库当前不内置生产级 CLI。
+
+示例模式：
+
+```bash
+run-skill primary-market-quick-look \
+  --project ./projects/demo-company \
+  --out ./outputs/demo-company/quick_look_v1.md
+```
+
+上面的命令是 illustrative CLI pattern，不是本 repo 当前发布的真实命令。
+
+## 配合 Codex 或本地文件型工作流使用
+
+skills 负责定义工作流和边界：哪些输入可接受、证据如何标注、输出应包含什么、哪些判断必须人工复核。Codex 或类似 AI coding agent 可以读取本地 skill 文件和脱敏项目材料，组织上下文，并生成 Markdown 工作底稿。
+
+人仍然负责判断、修正、继续追问和任何业务或投资决策。本仓库不包含生产级 orchestration 代码、模型接入、API connector 或内置 CLI。
+
+## 推荐试用顺序
+
+推荐首次试用：
 
 1. [primary-market-quick-look](skills/primary-market-quick-look/README.md)：最适合新读者理解“如何用投资研究框架看一家公司”，覆盖项目本质、投资逻辑、亮点、反方假设、风险和下一步验证。
 2. [investment-risk-radar](skills/investment-risk-radar/README.md)：体现投资研究中的反方思维和风险拆解，把亮点可能高估、逻辑断点和证据缺口转化为验证动作。
-3. [versioned-investment-update](skills/versioned-investment-update/README.md)：体现 AI InvestOS 的核心差异化：新增资料后保留 V1/V2 判断变化，而不是简单重写一份报告。
+3. [dd-question-map](skills/dd-question-map/README.md)：把风险假设转为访谈、材料、数据、技术、客户和交易核验任务。
+
+新资料到来后：
+
+- [versioned-investment-update](skills/versioned-investment-update/README.md)：保留 V1/V2 判断变化，而不是简单重写一份报告。
+
+正式流转前：
+
+- [investment-evidence-audit](skills/investment-evidence-audit/README.md)：检查证据边界、过度确定性和人工复核要求。
 
 随后可阅读 [NovaCompute 端到端案例](examples/nova_compute_end_to_end.md)，查看六个 skills 如何串联为完整 workflow。
-
-在完整 workflow 中，[dd-question-map](skills/dd-question-map/README.md) 是从风险到尽调执行的问题地图，将风险转为访谈、材料、数据、技术、客户和交易核验任务；它没有进入前三，并不代表重要性降低，而是更适合在理解项目初判与风险雷达后阅读。
-
-[investment-evidence-audit](skills/investment-evidence-audit/README.md) 是母稿输出前的 evidence boundary gate，用于检查公司口径、分析推断、过度确定性和禁止性结论。它继续承担横向质量控制，不因推荐阅读顺序变化而被弱化。
 
 ## 统一 Evidence Labels
 

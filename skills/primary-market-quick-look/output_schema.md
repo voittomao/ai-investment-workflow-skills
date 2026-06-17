@@ -10,14 +10,39 @@ Use this schema as a reference shape. It is intentionally lightweight so teams c
     "all_examples_are_fictional": true,
     "requires_human_review": true
   },
+  "source_references": [
+    {
+      "source_id": "...",
+      "evidence_label": "...",
+      "note": "..."
+    }
+  ],
   "output": {
-    "project_essence": "..."
-    "business_model": "..."
-    "investment_logic": "..."
-    "highlights": "..."
-    "counter_hypotheses": "..."
-    "core_risks": "..."
-    "evidence_gaps": "..."
+    "executive_snapshot": {
+      "one_sentence_project_essence": "...",
+      "workflow_status": "source-limited quick look | ready for risk radar | needs more materials before DD question map | ready for evidence audit before circulation",
+      "current_material_maturity": "...",
+      "three_preliminary_highlights": [
+        "..."
+      ],
+      "three_key_risks_or_counter_hypotheses": [
+        "..."
+      ],
+      "three_next_verification_priorities": [
+        "..."
+      ],
+      "recommended_next_skill_to_run": [
+        "investment-risk-radar"
+      ]
+    },
+    "recommended_next_workflow_step": "...",
+    "project_essence": "...",
+    "business_model": "...",
+    "investment_logic": "...",
+    "highlights": "...",
+    "counter_hypotheses": "...",
+    "core_risks": "...",
+    "evidence_gaps": "...",
     "next_steps": "..."
   },
   "quality_flags": [
@@ -25,6 +50,28 @@ Use this schema as a reference shape. It is intentionally lightweight so teams c
   ]
 }
 ```
+
+## Executive Snapshot / 5-minute brief
+
+Include this section at the top of quick-look outputs:
+
+- `one_sentence_project_essence`.
+- `workflow_status`, describing workflow readiness only.
+- `current_material_maturity`.
+- 3 preliminary highlights.
+- 3 key risks / counter-hypotheses.
+- 3 next verification priorities.
+- Recommended next skill to run, framed as workflow guidance only.
+
+## Optional Source References
+
+`source_references` is optional. Use it when lightweight references are available, such as a filename, page number, section title, interview date, or spreadsheet tab. Do not require every output item to have a `source_id`, and do not fabricate source IDs when the source location is unavailable.
+
+## Recommended Next Workflow Step
+
+Recommended next workflow step: `investment-risk-radar` to stress-test the initial logic, or `dd-question-map` if a management meeting or diligence sprint is scheduled.
+
+This is a workflow suggestion only. Do not force the next skill to run when the available evidence or user intent does not support it, and do not frame the workflow step as an investment decision.
 
 ## Field Rules
 

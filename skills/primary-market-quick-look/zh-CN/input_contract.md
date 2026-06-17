@@ -9,6 +9,10 @@
 - `known_limitations`：已知缺口、冲突和不可使用范围。
 - `sensitive_boundary`：保密、隐私和外部模型使用限制。
 
+## Source References / 来源引用
+
+如条件允许，可用轻量 `source_id` 标注来源，例如文件名、页码、章节、访谈日期或表格 tab。若无法确认来源位置，不得编造 source_id。
+
 ## 推荐输入
 
 资料分诊结果、项目上下文、证据摘录、已知限制和投资团队关注点；输入应尽量带 evidence_id 或材料引用。

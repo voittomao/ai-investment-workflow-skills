@@ -46,6 +46,8 @@ Use these labels:
 - missing_evidence
 - needs_human_review
 
+When available, cite source references using a lightweight `source_id` such as filename, page number, section title, interview date, or spreadsheet tab. Do not fabricate source IDs when the source location is unavailable.
+
 Never treat a `company_claim` as verified fact. Use `inferred` for analytical judgment and `missing_evidence` when a conclusion cannot be supported. Use `needs_human_review` before the output is circulated.
 
 ## 7. Prohibited Wording

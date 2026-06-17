@@ -5,6 +5,16 @@
 NovaCompute 为完全虚构的 AI 训练平台样例公司。示例中的公司描述、材料、客户代号和全部业务数字均为虚构样例，不对应任何真实项目、客户、融资或交易。
 
 
+## Executive Snapshot / 5-minute brief
+
+- **一句话项目本质：** NovaCompute 是一个完全虚构的 AI 训练 workflow 平台样例，主张通过调度和编排提升训练效率。`inferred`
+- **Workflow status：** ready for risk radar；needs more materials before DD question map。`inferred`
+- **当前材料成熟度：** 仅有 BP 和有限虚构说明，尚不足以形成可流转工作底稿。`missing_evidence`
+- **3 个初步亮点：** 问题定义清晰、存在效率提升主张、虚构材料中出现早期客户兴趣。`company_claim`
+- **3 个关键风险 / 反方假设：** 性能提升可能难以跨工作负载复现；客户可能选择云厂商或开源工具；交付可能依赖重服务。`inferred`
+- **3 个下一步验证重点：** 复现实验 benchmark、验证客户真实使用、拆分软件订阅与服务/资源转售收入。`missing_evidence`
+- **推荐的下一步 skill：** `investment-risk-radar`，用于压测初步投资逻辑候选；若已安排管理层会议，可运行 `dd-question-map`。
+
 ## 项目本质
 
 NovaCompute 的核心命题不是“AI Infra 市场是否增长”，而是其调度软件能否在客户已有云、开源框架和自建工具之外，形成可复现、可持续付费且不依赖重实施的独立软件价值。`inferred`
@@ -33,3 +43,7 @@ NovaCompute 的核心命题不是“AI Infra 市场是否增长”，而是其�
 ## 人工复核
 
 以上内容是工作底稿示例，状态为 `needs_human_review`。投资团队应复核材料引用、判断边界、风险优先级和下一步动作。
+
+## 推荐的下一步工作流
+
+如团队希望压测初步逻辑，下一步可运行 `investment-risk-radar`；如下一步是尽调会议，可运行 `dd-question-map`。这只是 workflow 建议，不是投资建议。

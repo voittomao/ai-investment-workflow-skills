@@ -1,0 +1,4 @@
+# Keep documentation and text workflow contracts stable across platforms.
+*.md text eol=lf
+*.txt text eol=lf
+LICENSE text eol=lf
