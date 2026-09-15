@@ -1,9 +1,17 @@
 # Quality Checklist: Primary-Market Quick-Look
 
+## v0.2 Contract Checks
+
+- [ ] Business Understanding is separate from the Investment Judgment Candidate.
+- [ ] The main analysis follows Project Essence → causal Thesis Candidate → Strongest Counter → Falsification → Value of Information → Next Verification.
+- [ ] The fastest falsifier and highest-value next evidence are explicit.
+- [ ] A 3/3/3 snapshot, if used, remains a presentation aid rather than the analysis spine.
+- [ ] The output follows [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md) and remains subject to Human Review.
+
 - [ ] The output keeps the investor-style company research lens.
-- [ ] The Executive Snapshot includes project essence, workflow status, material maturity, highlights, risks, verification priorities, and recommended next skill to run.
+- [ ] If an Executive Snapshot is used, it summarizes project essence, workflow status, material maturity, selected highlights/risks, verification priorities, and the recommended next skill.
 - [ ] `workflow_status` describes only workflow readiness and does not imply an investment recommendation.
-- [ ] The output starts with an Executive Snapshot / 5-minute brief.
+- [ ] The Project Essence → Thesis → Counter → Falsification → VOI → Verification chain remains the analytical spine; any Executive Snapshot is optional presentation.
 - [ ] The input boundary is explicit.
 - [ ] All examples are fictional when used publicly.
 - [ ] Evidence labels are used consistently.

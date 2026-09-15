@@ -5,6 +5,19 @@ description: Use when prioritized risks must be translated into a complete dilig
 
 # 核心待验证问题地图
 
+## v0.2 专业合同（英文 canonical 的中文镜像）
+
+本 Skill 把当前判断和高优先级风险转成聚焦、可执行的尽调地图。每个高优先级问题都应回答：“什么答案会改变判断？”
+
+`判断/风险 → 研究需要 → 信息价值（VOI）→ 验证目标 → 访谈问题/材料请求 → 预期判断影响`
+
+- **输入边界**：投资判断候选、投资逻辑候选、风险雷达及判断敏感性、证据缺口/冲突、可接触来源、权限边界和本次 DD 要服务的决策问题。
+- **核心输出**：对应判断或风险、研究需要、信息价值、验证目标、目标来源、最小必要问题/材料请求/数据核验/测试、支持/削弱/推翻/仍未知信号、预期判断影响和下一步。
+- **质量原则**：问题数量不是质量；问题、材料请求、计划搜索和预期答案都是验证动作，不是证据。
+- **边界**：专业机构范围、权限、隐私和问题表述必须由人复核。
+
+统一证据语义以仓库根目录 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md) 为准。英文 `skill.md` 仍是 canonical authority。
+
 ## Skill 目标
 
 从风险和核心待验证事项生成完整 DD 问题地图，明确问谁、查什么、需要什么证据、什么结果支持或推翻判断，以及下一步如何处理。
@@ -42,8 +55,11 @@ description: Use when prioritized risks must be translated into a complete dilig
 | `interview_note` | 访谈纪要中的陈述 | 标明访谈对象、日期或版本；不能替代底层材料 |
 | `financial_snapshot` | 财务快照、管理报表或模型摘录 | 标明是否审计、口径和期间 |
 | `third_party_unverified` | 第三方材料但尚未复核 | 说明来源与未核验状态 |
+| `independent_evidence` | 与被检验公司口径具有实质独立性的证据 | 仍需检查方法、日期和相关性 |
 | `inferred` | 基于现有材料形成的分析推断 | 给出推断链和可能改变判断的条件 |
+| `unknown` | 当前无法建立的事实或关系 | 显式保留，不以合理猜测补齐 |
 | `missing_evidence` | 关键证据缺失 | 转化为材料请求或尽调问题 |
+| `conflict` | 来源、日期、定义或状态无法一致 | 保留冲突并说明解决所需证据 |
 | `needs_human_review` | 需要投资团队确认 | 不得自动升级为确定性结论 |
 
 

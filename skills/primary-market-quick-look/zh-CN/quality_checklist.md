@@ -1,8 +1,17 @@
 # 一级市场项目初判：质量检查清单
 
+## v0.2 合同检查
+
+- [ ] 业务理解与投资判断候选明确分开。
+- [ ] 主线遵循“项目本质 → 因果逻辑候选 → 最强反方 → 证伪 → 信息价值 → 下一步验证”。
+- [ ] 最快证伪和最高价值下一证据明确。
+- [ ] 3/3/3 快照如保留，仅作为展示而不是分析主线。
+- [ ] 输出遵循 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md) 并保留 Human Review。
+
 ## 模块质量
 
-- [ ] 输出开头包含 Executive Snapshot / 5-minute brief，并覆盖项目本质、workflow 状态、材料成熟度、亮点、风险、验证重点和推荐下一步 skill。
+- [ ] 如使用 Executive Snapshot，仅用于概括项目本质、workflow 状态、材料成熟度、经选择的亮点/风险、验证重点和推荐下一步 skill。
+- [ ] “项目本质 → 逻辑 → 反方 → 证伪 → VOI → 验证”仍是分析主线；Executive Snapshot 只是可选展示。
 - [ ] `workflow_status` 只描述工作流状态，不暗示投资建议或自动决策。
 
 - [ ] 项目本质是否回答“卖什么、为谁、为何付费”。

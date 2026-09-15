@@ -2,6 +2,10 @@
 
 ## Schema
 
+## v0.2 必需语义
+
+下方 JSON 是最小容器，不是完整 canonical 合同。每项重要风险还必须表达：对应投资逻辑/假设、为什么可能失效、证据状态与信号、最快证伪、判断敏感性、DD 优先级、目标来源/材料请求和人工复核边界。统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)。
+
 ```json
 {
   "recommended_next_workflow_step": "string",
@@ -25,7 +29,8 @@
       "why_it_matters": "string",
       "impact_if_true": "string",
       "severity": "high|medium|low",
-      "probability": "unknown|low|medium|high",
+      "probability": "unknown|qualitative_only_if_supported",
+      "priority_rationale": "string",
       "priority": "verify_first|focus|follow_up",
       "diligence_action": "string",
       "material_request": "string",

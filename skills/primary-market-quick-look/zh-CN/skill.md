@@ -5,6 +5,19 @@ description: Use when a primary-market investor needs a disciplined quick-look j
 
 # 一级市场项目初判
 
+## v0.2 专业合同（英文 canonical 的中文镜像）
+
+本 Skill 形成第一版、有证据边界的**投资判断候选**，核心回答：“这个项目真正赌什么？”主要推理链是：
+
+`项目本质 → 投资逻辑候选及因果链 → 最强反方 → 证伪条件 → 信息价值（VOI）→ 下一步验证`
+
+- **输入边界**：资料分诊结果、证据 `as_of`、最小相关公司/产品/客户/商业/竞争/财务材料、材料冲突与缺口，以及本次要服务的判断问题。
+- **核心输出**：业务理解、项目本质、投资判断候选、逻辑因果链、最强反方、证伪条件、最快证伪证据、最值得优先获取的证据、核心风险/冲突/未知项和下一步验证。
+- **关键区分**：业务理解不等于投资判断；模型形成的逻辑和结论不是来源证据；输出候选不等于已接受判断。
+- **表达要求**：不得把“亮点 1/2/3 + 风险 1/2/3”作为主要分析逻辑，简洁列表只能服务上述因果链。
+
+统一证据语义以仓库根目录 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md) 为准。英文 `skill.md` 仍是 canonical authority。
+
 ## Skill 目标
 
 在资料有限条件下形成有观点、有反方、有证据边界的项目初判，覆盖项目本质、一句话判断、投资逻辑、亮点、反方假设、核心风险、资料缺口和下一步建议。
@@ -44,8 +57,11 @@ description: Use when a primary-market investor needs a disciplined quick-look j
 | `interview_note` | 访谈纪要中的陈述 | 标明访谈对象、日期或版本；不能替代底层材料 |
 | `financial_snapshot` | 财务快照、管理报表或模型摘录 | 标明是否审计、口径和期间 |
 | `third_party_unverified` | 第三方材料但尚未复核 | 说明来源与未核验状态 |
+| `independent_evidence` | 与被检验公司口径具有实质独立性的证据 | 仍需检查方法、日期和相关性 |
 | `inferred` | 基于现有材料形成的分析推断 | 给出推断链和可能改变判断的条件 |
+| `unknown` | 当前无法建立的事实或关系 | 显式保留，不以合理猜测补齐 |
 | `missing_evidence` | 关键证据缺失 | 转化为材料请求或尽调问题 |
+| `conflict` | 来源、日期、定义或状态无法一致 | 保留冲突并说明解决所需证据 |
 | `needs_human_review` | 需要投资团队确认 | 不得自动升级为确定性结论 |
 
 

@@ -2,6 +2,10 @@
 
 ## Schema
 
+## v0.2 必需语义
+
+下方 JSON 是最小容器，不是完整 canonical 合同。v0.2 输出还必须表达：研究问题、`as_of`、来源类型、定性权威性/证据强度、来源日期/生效期间、时效性、历史/当前/已被替代状态、冲突、可支持/不可支持事项、最小相关上下文和缺失证据。统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)。
+
 ```json
 {
   "recommended_next_workflow_step": "string",

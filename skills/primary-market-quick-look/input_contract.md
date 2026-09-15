@@ -8,19 +8,28 @@
 - financial or traction snapshots if available
 - known missing evidence
 
+## v0.2 Required Context
+
+Also provide the decision/research question, evidence `as_of`, source conflicts, and the minimum relevant company, product, customer, commercial, competition, and financial evidence available. The input must support a bounded hypothesis; otherwise retain Unknown and return to Source Material Triage.
+
+Follow [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md). Business Understanding and the Investment Judgment Candidate must remain distinct.
+
 ## Source References
 
 When available, cite source references using a lightweight `source_id` such as filename, page number, section title, interview date, or spreadsheet tab. Do not fabricate source IDs when the source location is unavailable.
 
-## Accepted Evidence Labels
+## Common Evidence Labels (not exhaustive)
 
 - user_provided
 - company_claim
 - interview_note
 - financial_snapshot
 - third_party_unverified
+- independent_evidence
 - inferred
+- unknown
 - missing_evidence
+- conflict
 - needs_human_review
 
 ## Input Boundary

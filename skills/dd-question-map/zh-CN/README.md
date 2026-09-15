@@ -1,6 +1,8 @@
 # 核心待验证问题地图
 
-`dd-question-map` 是一项一级市场投研 workflow skill，用于：从风险和核心待验证事项生成完整 DD 问题地图，明确问谁、查什么、需要什么证据、什么结果支持或推翻判断，以及下一步如何处理。
+`dd-question-map` 用于把判断和风险转为研究需要、信息价值、验证目标、问题/材料请求、支持/削弱/推翻/仍未知信号及预期判断影响。问题数量不是质量。
+
+统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)；英文 `skill.md` 为 canonical authority。
 
 ## 何时使用
 

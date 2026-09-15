@@ -31,11 +31,11 @@
 
 这不是 prompt collection。六个 skills 共同组织：
 
-- 项目资料：先判断材料是什么、能支持什么、还缺什么。
-- 初步判断：解释公司本质、投资逻辑、亮点与反方假设。
-- 风险和 DD：把逻辑断点转成风险、问题、材料请求和验证动作。
-- 版本变化：新增资料后保留哪些判断被强化、削弱或仍待核验。
-- 证据边界：区分公司口径、访谈、财务快照、推断和缺失证据。
+- 项目资料：判断已有材料的来源、权威性、时效性、冲突、能支持什么和还缺什么。
+- 初步判断：沿“项目本质 → 投资逻辑候选 → 最强反方 → 证伪 → 信息价值 → 下一步验证”形成候选判断。
+- 风险和 DD：把逻辑断点转成最快证伪、判断敏感性、研究需要和会改变判断的验证动作。
+- 版本变化：严格区分材料变化、证据变化和判断变化，不因收到新材料自动覆盖历史判断。
+- 证据边界：检查来源支持、独立性、时效性、冲突、未知项和生成分析冒充证据。
 
 每个 skill 都有输入边界、输出合同、证据标签、禁止性表述、虚构示例和人工复核要求。最终目标是形成更有判断深度、可审阅、可追溯的投资分析工作底稿。
 
@@ -55,12 +55,12 @@ flowchart LR
 
 | 顺序 | Skill | 核心问题 | 主要输出 |
 | --- | --- | --- | --- |
-| 01 | [source-material-triage](skills/source-material-triage/README.md) | 资料是什么，能支持什么？ | 材料清单、成熟度、冲突、缺口和判断边界 |
-| 02 | [primary-market-quick-look](skills/primary-market-quick-look/README.md) | 这家公司本质上值得判断什么？ | 项目本质、投资逻辑、亮点、反方和下一步 |
-| 03 | [investment-risk-radar](skills/investment-risk-radar/README.md) | 核心逻辑可能在哪里失效？ | 风险回链、证据状态、优先动作和材料请求 |
-| 04 | [dd-question-map](skills/dd-question-map/README.md) | 应该问谁、查什么、什么会改变判断？ | 访谈、材料、数据、技术、客户和交易核验地图 |
-| 05 | [versioned-investment-update](skills/versioned-investment-update/README.md) | 新资料到来后，判断发生了什么变化？ | V1/V2 强化、削弱、新增风险和母稿更新建议 |
-| 06 | [investment-evidence-audit](skills/investment-evidence-audit/README.md) | 文本是否越过了证据边界？ | 逐条审计、改写建议、所需证据和人工复核项 |
+| 01 | [source-material-triage](skills/source-material-triage/README.md) | 已有资料能支持什么？ | 来源权威性/时效性、冲突、成熟度、证据边界和缺失证据 |
+| 02 | [primary-market-quick-look](skills/primary-market-quick-look/README.md) | 这个项目真正赌什么？ | 项目本质、因果逻辑、最强反方、证伪和最高价值证据 |
+| 03 | [investment-risk-radar](skills/investment-risk-radar/README.md) | 当前逻辑最可能如何失效？ | 对应逻辑、最快证伪、判断敏感性和 DD 优先级 |
+| 04 | [dd-question-map](skills/dd-question-map/README.md) | 什么答案会改变判断？ | 研究需要、信息价值、验证目标、问题/材料请求和判断影响 |
+| 05 | [versioned-investment-update](skills/versioned-investment-update/README.md) | 新资料到来后，什么真的变了？ | Material Delta、Evidence Delta、Judgment Delta 和候选更新 |
+| 06 | [investment-evidence-audit](skills/investment-evidence-audit/README.md) | 分析是否比证据更确定？ | 陈述—证据审计、时效/冲突/状态越界和改写建议 |
 
 ## Quick Start / 如何使用
 
@@ -118,18 +118,45 @@ skills 负责定义工作流和边界：哪些输入可接受、证据如何标�
 
 随后可阅读 [NovaCompute 端到端案例](examples/nova_compute_end_to_end.md)，查看六个 skills 如何串联为完整 workflow。
 
-## 统一 Evidence Labels
+## 统一证据语义
 
-| 标签 | 含义 |
-| --- | --- |
-| `user_provided` | 用户直接提供的材料或说明 |
-| `company_claim` | 公司、创始人或 BP 的单方口径 |
-| `interview_note` | 访谈纪要中的陈述 |
-| `financial_snapshot` | 财务快照、管理报表或模型摘录 |
-| `third_party_unverified` | 第三方但尚未核验的材料 |
-| `inferred` | 基于现有材料形成的分析推断 |
-| `missing_evidence` | 会影响判断但尚未取得的证据 |
-| `needs_human_review` | 必须由投资团队复核的内容 |
+六个 Skills 共同遵循根目录的 [Shared Evidence Semantics](EVIDENCE_SEMANTICS.md)，覆盖 `source`、`source_type`、`source_date`、`as_of`、定性 `authority / evidence_strength`、`company_claim`、`independent_evidence`、`interview_note`、`financial_snapshot`、`inferred`、`unknown / missing_evidence`、`conflict` 和 `needs_human_review`。
+
+五条最小原则：
+
+1. 公司口径不等于已核验事实。
+2. 生成分析不等于来源证据。
+3. 较新的文件不自动等于当前事实。
+4. 未知项必须显式保留。
+5. 专业使用前必须经过 Human Review。
+
+## 四种 Research Mode
+
+Research Mode 描述当前信息状态，不是四个新 Skills，本仓库也不实现 mode engine。
+
+| Mode | 入口状态 | 使用方式 |
+| --- | --- | --- |
+| **Greenfield** | 基本没有可用内部材料 | 先建立第一版公开证据，再组合相关 Skills 形成有边界的初判 |
+| **Material-led** | 已有 BP、访谈、财务或经营材料 | 以内生材料为主，只围绕判断问题做外部补证和反证 |
+| **Deep DD** | 已有初判和关键假设/风险 | 用 Risk Radar 与 DD Question Map 定向验证最可能改变判断的证据 |
+| **Incremental Update** | 已有历史判断，新材料或事件到来 | 用 Versioned Update 区分材料、证据和判断变化 |
+
+系统或用户根据入口状态选择 Mode，再组合所需 Skills。Company Research、DD Verification、Comparative/Sector Research、Transaction Review 等属于 Decision Objective；Transaction-driven 不是第五种 Research Mode。
+
+## 专业 Skills 与治理工作流
+
+公开 Skills 定义专业研究动作；在更完整的系统中，它们可以运行于提供上下文、工具、隐私、连续性和 Human Review 的治理工作流中。生成结果仍是待专业复核的候选，不会自动成为当前或已接受判断。
+
+本仓库不实现路由、审批状态、Experience/Wiki、Skill Evolution、Eval、恢复机制或私有交易处理。
+
+## 正在真实验证的 Candidates
+
+以下两项仍处于 **under real-world validation**，不是正式 Skills：
+
+- **External Research & Evidence Build / 外部研究与证据构建**：验证“研究需要 → 来源发现 → 来源权威性 → 独立交叉验证 → 冲突 → 证据构建 → 停止条件”能否形成稳定专业合同。
+- **Follow-on / Transaction Review / 后续轮与交易研判**：验证“历史投资逻辑 → 证据变化 → 公司判断变化 → 交易条款 → 公司判断与交易判断分离”能否跨项目稳定复现。
+
+正式 Skill 数仍为 6。Candidate 只有在独立目标、稳定输入/流程/输出、跨场景复现、无法被现有 Skills 简单组合替代且经人工复核后，才可能晋升。
 
 ## 与 AI InvestOS 的关系
 
@@ -173,7 +200,7 @@ AI InvestOS 将这些 skills 进一步组织为资料分诊、项目研判、风
 
 推荐使用以下中性引用：
 
-> AI Investment Workflow Skills v0.1：一套以一级市场投资研究为主线，用于公司研究、尽调组织、风险映射、版本化更新与证据审计的开源 workflow skills。
+> AI Investment Workflow Skills v0.2：一套以一级市场投资研究为主线，用于公司研究、尽调组织、风险映射、版本化更新与证据审计的开源 workflow skills。
 
 引用时应同时说明：
 

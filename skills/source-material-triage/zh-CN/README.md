@@ -1,6 +1,8 @@
 # 项目资料分诊
 
-`source-material-triage` 是一项一级市场投研 workflow skill，用于：识别 BP、访谈纪要、财务表、客户清单、产品材料和交易材料的角色、成熟度、可用范围、证据边界、相互矛盾和缺失项，为项目本质研判与投资分析母稿建立可靠输入层。
+`source-material-triage` 用于判断已持有材料的来源类型、定性权威性、日期/时效性、历史或当前状态、冲突、成熟度、证据边界、最小相关上下文和缺失证据。它不主动承担完整外部研究，也不形成投资判断。
+
+统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)；英文 `skill.md` 为 canonical authority。
 
 ## 何时使用
 

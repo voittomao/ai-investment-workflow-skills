@@ -2,6 +2,10 @@
 
 ## Schema
 
+## v0.2 必需语义
+
+下方 JSON 是最小容器，不是完整 canonical 合同。v0.2 输出必须包含：历史判断与 `prior_judgment_as_of`、历史证据边界、Material Delta、新证据、`evidence_as_of`、Evidence Delta、Judgment Delta（强化/削弱/不变/新增/已解决或风险缓解/仍未知）、风险与 DD 变化、候选判断更新和人工复核。统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)。
+
 ```json
 {
   "recommended_next_workflow_step": "string",

@@ -1,6 +1,8 @@
 # 新增资料后的版本化研判更新
 
-`versioned-investment-update` 是一项一级市场投研 workflow skill，用于：新增资料后保留历史判断，输出被强化、被削弱、新增或缓解的风险、已关闭和仍待核验事项，并提出新版投资分析母稿的更新建议。
+`versioned-investment-update` 用于保留历史判断，并严格区分 Material Delta、Evidence Delta 与 Judgment Delta；输出强化、削弱、不变、新增、已解决/风险缓解、仍未知和候选判断更新，等待 Human Review。
+
+统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)；英文 `skill.md` 为 canonical authority。
 
 ## 何时使用
 

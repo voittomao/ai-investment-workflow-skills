@@ -1,5 +1,13 @@
 # Quality Checklist: Investment Risk Radar
 
+## v0.2 Contract Checks
+
+- [ ] Every material risk links to a thesis or causal assumption and explains how it may fail.
+- [ ] Evidence signals and the fastest practical falsifier are explicit.
+- [ ] Judgment sensitivity states what changes if the risk is confirmed, cleared, or remains Unknown.
+- [ ] DD priority reflects expected judgment impact and evidence accessibility, not severity alone.
+- [ ] The output follows [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md).
+
 - [ ] The output keeps the investor-style company research lens.
 - [ ] The input boundary is explicit.
 - [ ] All examples are fictional when used publicly.

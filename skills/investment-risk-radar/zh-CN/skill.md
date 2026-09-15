@@ -5,6 +5,19 @@ description: Use when investment logic, highlights, and evidence gaps must be co
 
 # 投资风险雷达
 
+## v0.2 专业合同（英文 canonical 的中文镜像）
+
+本 Skill 用于识别投资逻辑最可能如何失效，并把风险转为最快可验证的证据问题：
+
+`风险 → 对应投资逻辑 → 为什么可能失效 → 证据信号 → 最快证伪 → 判断敏感性 → DD 优先级`
+
+- **输入边界**：当前投资逻辑候选及因果假设、项目本质、投资判断候选、最强反方、已有证据/冲突/缺口及其 `as_of`。
+- **核心输出**：对应逻辑、失效机制、现有证据与可观察信号、最快证伪、若证实/排除/仍未知时对判断的影响、DD 优先级和下一验证动作。
+- **排序原则**：风险优先级不能只看抽象严重度，还要看是否会实质改变判断，以及证据是否可获得。
+- **边界**：风险假设和验证动作不是证据；不得伪造概率或宣称风险已消失。
+
+统一证据语义以仓库根目录 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md) 为准。英文 `skill.md` 仍是 canonical authority。
+
 ## Skill 目标
 
 把投资逻辑可能失效的原因、亮点高估风险、反方假设、证据缺口和材料冲突转化为可回链、可排序、可执行的风险验证中间层。
@@ -42,8 +55,11 @@ description: Use when investment logic, highlights, and evidence gaps must be co
 | `interview_note` | 访谈纪要中的陈述 | 标明访谈对象、日期或版本；不能替代底层材料 |
 | `financial_snapshot` | 财务快照、管理报表或模型摘录 | 标明是否审计、口径和期间 |
 | `third_party_unverified` | 第三方材料但尚未复核 | 说明来源与未核验状态 |
+| `independent_evidence` | 与被检验公司口径具有实质独立性的证据 | 仍需检查方法、日期和相关性 |
 | `inferred` | 基于现有材料形成的分析推断 | 给出推断链和可能改变判断的条件 |
+| `unknown` | 当前无法建立的事实或关系 | 显式保留，不以合理猜测补齐 |
 | `missing_evidence` | 关键证据缺失 | 转化为材料请求或尽调问题 |
+| `conflict` | 来源、日期、定义或状态无法一致 | 保留冲突并说明解决所需证据 |
 | `needs_human_review` | 需要投资团队确认 | 不得自动升级为确定性结论 |
 
 

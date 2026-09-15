@@ -5,6 +5,21 @@ description: Use when new project materials arrive and the investment team needs
 
 # 新增资料后的版本化研判更新
 
+## v0.2 专业合同（英文 canonical 的中文镜像）
+
+本 Skill 保留历史判断，并解释新增材料到来后“什么真的变了”。必须区分：
+
+- **材料变化（Material Delta）**：新增或变化了哪些材料；
+- **证据变化（Evidence Delta）**：这些材料带来了哪些支持、反证、权威性/时效性变化、冲突或未知项变化；
+- **判断变化（Judgment Delta）**：哪些结论、信心、逻辑、风险或 DD 优先级因此改变。
+
+- **输入边界**：历史判断及 `prior_judgment_as_of`、历史证据边界、新材料及日期/生效期间、新证据及 `evidence_as_of`、既有逻辑/风险/DD/未知项和人工关注点。
+- **核心输出**：历史判断、三类 Delta、强化/削弱/不变/新增/已解决或风险缓解/仍未知、判断变化理由、风险与 DD 变化、候选判断更新和人工复核项。
+- **关键原则**：新材料进入不等于证据增强，证据变化也不必然导致判断变化；“不变”是有效结果。
+- **边界**：只建议形成候选更新并由人确认，不公开或实现 Candidate/Current 状态机。
+
+统一证据语义以仓库根目录 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md) 为准。英文 `skill.md` 仍是 canonical authority。
+
 ## Skill 目标
 
 新增资料后保留历史判断，输出被强化、被削弱、新增或缓解的风险、已关闭和仍待核验事项，并提出新版投资分析母稿的更新建议。
@@ -42,8 +57,11 @@ V1 资料 manifest、V1 判断、V2 新增资料 manifest、V2 证据摘录、�
 | `interview_note` | 访谈纪要中的陈述 | 标明访谈对象、日期或版本；不能替代底层材料 |
 | `financial_snapshot` | 财务快照、管理报表或模型摘录 | 标明是否审计、口径和期间 |
 | `third_party_unverified` | 第三方材料但尚未复核 | 说明来源与未核验状态 |
+| `independent_evidence` | 与被检验公司口径具有实质独立性的证据 | 仍需检查方法、日期和相关性 |
 | `inferred` | 基于现有材料形成的分析推断 | 给出推断链和可能改变判断的条件 |
+| `unknown` | 当前无法建立的事实或关系 | 显式保留，不以合理猜测补齐 |
 | `missing_evidence` | 关键证据缺失 | 转化为材料请求或尽调问题 |
+| `conflict` | 来源、日期、定义或状态无法一致 | 保留冲突并说明解决所需证据 |
 | `needs_human_review` | 需要投资团队确认 | 不得自动升级为确定性结论 |
 
 

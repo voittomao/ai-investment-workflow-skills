@@ -5,6 +5,17 @@ description: Use when a primary-market project has mixed source materials that m
 
 # 项目资料分诊
 
+## v0.2 专业合同（英文 canonical 的中文镜像）
+
+本 Skill 回答：“我手里已经有什么，这些材料能够支持什么？”它只整理和界定**已持有材料**，不主动承担完整外部研究，也不形成投资判断。
+
+- **输入边界**：当前研究问题、证据 `as_of`、材料清单或必要摘录、来源主体与 `source_type`、`source_date` / 生效期间、已知历史/当前/已被替代状态、冲突和保密边界。
+- **处理主线**：最小相关材料 → 来源类型 → 定性权威性/证据强度 → 日期与时效性 → 历史/当前/被替代状态 → 冲突 → 成熟度与证据边界 → 缺失证据。
+- **核心输出**：材料清单、来源类型和定位、定性权威性、日期/生效期间、时效性、冲突、可支持/不可支持事项、最小相关上下文、材料成熟度、缺失证据和人工复核项。
+- **边界**：较新的文件不自动等于当前事实；冲突不得静默消解；缺失信息不得补造。
+
+统一证据语义以仓库根目录 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md) 为准。中文说明用于语义对齐；英文 `skill.md` 仍是 canonical authority。
+
 ## Skill 目标
 
 识别 BP、访谈纪要、财务表、客户清单、产品材料和交易材料的角色、成熟度、可用范围、证据边界、相互矛盾和缺失项，为项目本质研判与投资分析母稿建立可靠输入层。
@@ -42,8 +53,11 @@ description: Use when a primary-market project has mixed source materials that m
 | `interview_note` | 访谈纪要中的陈述 | 标明访谈对象、日期或版本；不能替代底层材料 |
 | `financial_snapshot` | 财务快照、管理报表或模型摘录 | 标明是否审计、口径和期间 |
 | `third_party_unverified` | 第三方材料但尚未复核 | 说明来源与未核验状态 |
+| `independent_evidence` | 与被检验公司口径具有实质独立性的证据 | 仍需检查方法、日期和相关性 |
 | `inferred` | 基于现有材料形成的分析推断 | 给出推断链和可能改变判断的条件 |
+| `unknown` | 当前无法建立的事实或关系 | 显式保留，不以合理猜测补齐 |
 | `missing_evidence` | 关键证据缺失 | 转化为材料请求或尽调问题 |
+| `conflict` | 来源、日期、定义或状态无法一致 | 保留冲突并说明解决所需证据 |
 | `needs_human_review` | 需要投资团队确认 | 不得自动升级为确定性结论 |
 
 

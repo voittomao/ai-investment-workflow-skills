@@ -10,18 +10,15 @@ Use this skill when a BP-only quick look is updated with new financial snapshots
 
 ## What It Produces
 
-- version change summary
-- material maturity change
-- strengthened views
-- weakened views
-- new risks
-- de-risked items
-- still-to-verify items
-- workpaper update recommendations
+- prior judgment and evidence `as_of`
+- Material Delta, Evidence Delta, and Judgment Delta
+- strengthened, weakened, unchanged, new, resolved/de-risked, and still-Unknown views
+- risk and DD changes
+- candidate judgment and workpaper update for Human Review
 
 ## Evidence Discipline
 
-This skill must separate facts, company claims, interview notes, financial snapshots, analytical inferences, missing evidence, and items that need human review.
+This skill follows the repository's [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md). New material does not automatically strengthen evidence or replace the prior judgment.
 
 ## AI InvestOS Module Mapping
 

@@ -2,6 +2,10 @@
 
 ## Schema
 
+## v0.2 必需语义
+
+下方 JSON 是最小容器，不是完整 canonical 合同。每项重要发现还必须表达：陈述分类、来源支持、权威性/独立性/时效性、问题类型、冲突或未知项、风险、最小修正动作、所需证据、人工复核和流转边界；审计必须识别过期证据、无依据状态/时间推断和生成分析冒充证据。统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)。
+
 ```json
 {
   "recommended_next_workflow_step": "string",

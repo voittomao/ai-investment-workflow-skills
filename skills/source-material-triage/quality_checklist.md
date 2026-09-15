@@ -1,5 +1,13 @@
 # Quality Checklist: Source Material Triage
 
+## v0.2 Contract Checks
+
+- [ ] Source type, qualitative authority/evidence strength, source date/effective period, and currentness are recorded when available.
+- [ ] Historical, current, superseded, and Unknown states are not conflated.
+- [ ] Conflicts are preserved and paired with a resolution need.
+- [ ] Only the minimum relevant held-material context is used; no full external research or investment judgment is produced.
+- [ ] The output follows [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md).
+
 - [ ] The output keeps the investor-style company research lens.
 - [ ] The input boundary is explicit.
 - [ ] All examples are fictional when used publicly.

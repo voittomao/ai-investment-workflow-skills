@@ -8,19 +8,28 @@
 - available target sources
 - human review priorities
 
+## v0.2 Required Context
+
+Provide the current Investment Judgment Candidate, Thesis Candidate, risk radar with judgment sensitivity, evidence gaps/conflicts, available target sources, access constraints, prior diligence results, and the decision the DD must inform.
+
+Follow [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md). Questions, material requests, planned searches, and expected answers are verification actions—not evidence.
+
 ## Source References
 
 When available, cite source references using a lightweight `source_id` such as filename, page number, section title, interview date, or spreadsheet tab. Do not fabricate source IDs when the source location is unavailable.
 
-## Accepted Evidence Labels
+## Common Evidence Labels (not exhaustive)
 
 - user_provided
 - company_claim
 - interview_note
 - financial_snapshot
 - third_party_unverified
+- independent_evidence
 - inferred
+- unknown
 - missing_evidence
+- conflict
 - needs_human_review
 
 ## Input Boundary

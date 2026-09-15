@@ -2,6 +2,10 @@
 
 Use this schema as a reference shape. It is intentionally lightweight so teams can adapt it to Markdown, JSON, tables, or internal tools.
 
+## v0.2 Required Semantics
+
+The JSON below is a minimum container, not the complete canonical contract. A v0.2 output must also represent `research_need`, `as_of`, source type, qualitative authority/evidence strength, source date/effective period, currentness, historical/current/superseded status, conflict, `usable_for`, `not_usable_for`, minimum relevant context, and missing evidence. Follow [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md).
+
 ```json
 {
   "skill": "source-material-triage",

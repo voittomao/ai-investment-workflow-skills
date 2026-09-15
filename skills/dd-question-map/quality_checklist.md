@@ -1,5 +1,13 @@
 # Quality Checklist: DD Question Map
 
+## v0.2 Contract Checks
+
+- [ ] Every high-priority item links to a judgment/risk and states the research need.
+- [ ] Value of Information and verification target are explicit without false numerical precision.
+- [ ] Support, weaken, break, and remain-Unknown signals state their expected judgment impact.
+- [ ] Question count is not rewarded; questions and requests remain verification actions, not evidence.
+- [ ] The output follows [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md).
+
 - [ ] The output keeps the investor-style company research lens.
 - [ ] The input boundary is explicit.
 - [ ] All examples are fictional when used publicly.

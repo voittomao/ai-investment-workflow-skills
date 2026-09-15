@@ -11,15 +11,15 @@ Use this skill before any quick-look analysis or investment workpaper drafting, 
 ## What It Produces
 
 - material inventory
-- material type classification
+- source type, qualitative authority, date/currentness, and conflict status
 - material maturity assessment
 - usable evidence boundary
-- missing material list
+- minimum relevant context and missing evidence
 - human review notes
 
 ## Evidence Discipline
 
-This skill must separate facts, company claims, interview notes, financial snapshots, analytical inferences, missing evidence, and items that need human review.
+This skill follows the repository's [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md). It preserves company claims, independent evidence, inference, Unknowns, conflicts, and temporal boundaries without forming an investment judgment or launching full external research.
 
 ## AI InvestOS Module Mapping
 

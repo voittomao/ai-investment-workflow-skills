@@ -1,5 +1,13 @@
 # 新增资料后的版本化研判更新：质量检查清单
 
+## v0.2 合同检查
+
+- [ ] 历史判断、`prior_judgment_as_of` 和历史证据边界被保留。
+- [ ] Material Delta、Evidence Delta 和 Judgment Delta 分别表达。
+- [ ] 强化、削弱、不变、新增、已解决/风险缓解和仍未知可区分。
+- [ ] 新材料未被当作证据自动增强或判断自动覆盖。
+- [ ] 输出是等待 Human Review 的候选更新，并遵循 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)。
+
 ## 模块质量
 
 - [ ] 是否保留 V1 基线和原判断，不做静默覆盖。

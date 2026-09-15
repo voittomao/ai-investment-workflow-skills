@@ -2,6 +2,10 @@
 
 Use this schema as a reference shape. It is intentionally lightweight so teams can adapt it to Markdown, JSON, tables, or internal tools.
 
+## v0.2 Required Semantics
+
+The JSON below is a minimum container, not the complete canonical contract. Each high-priority item must also state `linked_judgment_or_risk`, `research_need`, qualitative `value_of_information`, `verification_target`, support/weaken/break/remain-Unknown signals, `expected_judgment_impact`, and Human Review boundary. Follow [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md).
+
 ```json
 {
   "skill": "dd-question-map",

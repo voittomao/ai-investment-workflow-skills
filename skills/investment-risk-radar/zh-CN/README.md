@@ -1,6 +1,8 @@
 # 投资风险雷达
 
-`investment-risk-radar` 是一项一级市场投研 workflow skill，用于：把投资逻辑可能失效的原因、亮点高估风险、反方假设、证据缺口和材料冲突转化为可回链、可排序、可执行的风险验证中间层。
+`investment-risk-radar` 用于把风险回连到投资逻辑和失效机制，明确证据信号、最快证伪、判断敏感性、DD 优先级和下一验证动作，而不是生成泛化风险清单。
+
+统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)；英文 `skill.md` 为 canonical authority。
 
 ## 何时使用
 

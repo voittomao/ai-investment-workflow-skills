@@ -10,18 +10,15 @@ Use this skill when an investor, founder, analyst, or strategy team needs to und
 
 ## What It Produces
 
-- one-paragraph quick look
-- project essence
-- investment logic
-- highlight analysis
-- counter-hypotheses
-- risk summary
-- evidence gaps
-- next verification priorities
+- Business Understanding separated from an Investment Judgment Candidate
+- Project Essence and causal Thesis Candidate
+- Strongest Counter and falsification conditions
+- fastest falsifier and highest-value next evidence
+- core risks, conflicts, Unknowns, and next verification
 
 ## Evidence Discipline
 
-This skill must separate facts, company claims, interview notes, financial snapshots, analytical inferences, missing evidence, and items that need human review.
+This skill follows the repository's [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md). Generated thesis and judgment are analysis, not source evidence, and remain subject to Human Review.
 
 ## AI InvestOS Module Mapping
 

@@ -5,6 +5,17 @@ description: Use when an investment memo or analysis draft must be audited for u
 
 # 投资分析证据边界审计
 
+## v0.2 专业合同（英文 canonical 的中文镜像）
+
+本 Skill 检查分析是否把不够确定的内容说得过于确定。审计对象从单纯措辞升级为“陈述—证据”关系。
+
+- **输入边界**：待审文本和用途、证据清单/来源摘要、来源类型/日期/生效期间/`as_of`、公司口径、独立证据、已知冲突与未知项，以及相关历史/当前状态边界。
+- **处理重点**：来源支持、定性权威性、独立性、日期/时效性、公司口径与独立证据、事实与推断、未知项、冲突、过期证据、无依据的状态/时间推断、过度确定性，以及生成分析冒充来源证据。
+- **核心输出**：陈述分类、来源支持、权威性/独立性/时效性、问题类型、冲突或未知项、风险、保留/限定/改写/删除/补证建议、人工复核项和流转边界。
+- **边界**：本 Skill 不主动搜索证据、不做初始材料分诊、不确认事实真伪，也不批准工作底稿。
+
+统一证据语义以仓库根目录 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md) 为准。英文 `skill.md` 仍是 canonical authority。
+
 ## Skill 目标
 
 审查投资分析文本中的事实、公司口径、访谈陈述、推断、投资观点和信息缺口，识别过度确定性、缺失引用、虚假精确、禁止性结论，并给出保留判断力度的改写建议。
@@ -42,8 +53,11 @@ description: Use when an investment memo or analysis draft must be audited for u
 | `interview_note` | 访谈纪要中的陈述 | 标明访谈对象、日期或版本；不能替代底层材料 |
 | `financial_snapshot` | 财务快照、管理报表或模型摘录 | 标明是否审计、口径和期间 |
 | `third_party_unverified` | 第三方材料但尚未复核 | 说明来源与未核验状态 |
+| `independent_evidence` | 与被检验公司口径具有实质独立性的证据 | 仍需检查方法、日期和相关性 |
 | `inferred` | 基于现有材料形成的分析推断 | 给出推断链和可能改变判断的条件 |
+| `unknown` | 当前无法建立的事实或关系 | 显式保留，不以合理猜测补齐 |
 | `missing_evidence` | 关键证据缺失 | 转化为材料请求或尽调问题 |
+| `conflict` | 来源、日期、定义或状态无法一致 | 保留冲突并说明解决所需证据 |
 | `needs_human_review` | 需要投资团队确认 | 不得自动升级为确定性结论 |
 
 

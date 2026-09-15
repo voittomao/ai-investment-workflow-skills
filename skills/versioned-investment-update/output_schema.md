@@ -2,6 +2,10 @@
 
 Use this schema as a reference shape. It is intentionally lightweight so teams can adapt it to Markdown, JSON, tables, or internal tools.
 
+## v0.2 Required Semantics
+
+The JSON below is a minimum container, not the complete canonical contract. A v0.2 output must include prior judgment and `prior_judgment_as_of`, prior evidence boundary, `material_delta`, `new_evidence`, `evidence_as_of`, `evidence_delta`, `judgment_delta` (strengthened/weakened/unchanged/newly introduced/resolved or de-risked/still Unknown), risk/DD changes, candidate judgment update, and Human Review. Follow [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md).
+
 ```json
 {
   "skill": "versioned-investment-update",

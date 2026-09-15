@@ -1,6 +1,8 @@
 # 一级市场项目初判
 
-`primary-market-quick-look` 是一项一级市场投研 workflow skill，用于：在资料有限条件下形成有观点、有反方、有证据边界的项目初判，覆盖项目本质、一句话判断、投资逻辑、亮点、反方假设、核心风险、资料缺口和下一步建议。
+`primary-market-quick-look` 用于沿“项目本质 → 投资逻辑候选 → 最强反方 → 证伪 → 信息价值 → 下一步验证”形成第一版有证据边界的投资判断候选，并明确区分业务理解与投资判断。
+
+统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)；英文 `skill.md` 为 canonical authority。
 
 ## 何时使用
 

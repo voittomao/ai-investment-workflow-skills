@@ -2,6 +2,10 @@
 
 Use this schema as a reference shape. It is intentionally lightweight so teams can adapt it to Markdown, JSON, tables, or internal tools.
 
+## v0.2 Required Semantics
+
+The JSON below is a minimum container, not the complete canonical contract. Each material finding must also state claim classification, source support, authority/independence/currentness, issue type, conflict or Unknown, risk, smallest corrective action, required evidence, Human Review, and circulation boundary. The audit must detect stale support, unsupported state/temporal inference, and generated analysis used as evidence. Follow [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md).
+
 ```json
 {
   "skill": "investment-evidence-audit",

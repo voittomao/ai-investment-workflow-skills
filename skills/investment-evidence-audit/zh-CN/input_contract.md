@@ -9,6 +9,12 @@
 - `known_limitations`：已知缺口、冲突和不可使用范围。
 - `sensitive_boundary`：保密、隐私和外部模型使用限制。
 
+## v0.2 必需上下文
+
+应提供待审文本及用途、证据清单/来源摘要、来源类型/日期/生效期间/`as_of`、公司口径、独立证据、冲突与未知项、相关历史/当前状态边界，以及禁止性表述和人工复核要求。
+
+统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)。审计只检查现有文本与证据，不主动发现证据，也不批准流转。
+
 ## Source References / 来源引用
 
 如条件允许，可用轻量 `source_id` 标注来源，例如文件名、页码、章节、访谈日期或表格 tab。若无法确认来源位置，不得编造 source_id。

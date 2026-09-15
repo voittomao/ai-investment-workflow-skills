@@ -1,5 +1,13 @@
 # Quality Checklist: Versioned Investment Update
 
+## v0.2 Contract Checks
+
+- [ ] Prior judgment, `prior_judgment_as_of`, and prior evidence boundary are preserved.
+- [ ] Material Delta, Evidence Delta, and Judgment Delta are separately stated.
+- [ ] Strengthened, weakened, unchanged, newly introduced, resolved/de-risked, and still-Unknown views are distinguishable.
+- [ ] New material is not treated as automatic evidence improvement or automatic judgment replacement.
+- [ ] The output is a candidate update for Human Review and follows [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md).
+
 - [ ] The output keeps the investor-style company research lens.
 - [ ] The input boundary is explicit.
 - [ ] All examples are fictional when used publicly.

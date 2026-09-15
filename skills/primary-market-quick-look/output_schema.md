@@ -2,6 +2,10 @@
 
 Use this schema as a reference shape. It is intentionally lightweight so teams can adapt it to Markdown, JSON, tables, or internal tools.
 
+## v0.2 Required Semantics
+
+The JSON below is a minimum container, not the complete canonical contract. A v0.2 output must include Business Understanding, Project Essence, Investment Judgment Candidate, causal Thesis Candidate, Strongest Counter, falsification conditions, fastest falsifier, highest-value next evidence, risks/conflicts/Unknowns, and next verification. The 3/3/3 snapshot fields are optional presentation aids, not the analysis spine. Follow [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md).
+
 ```json
 {
   "skill": "primary-market-quick-look",
@@ -51,16 +55,16 @@ Use this schema as a reference shape. It is intentionally lightweight so teams c
 }
 ```
 
-## Executive Snapshot / 5-minute brief
+## Optional Executive Snapshot / 5-minute brief
 
-Include this section at the top of quick-look outputs:
+This legacy snapshot can remain as an optional presentation aid. It does not replace the v0.2 judgment spine. If used, include:
 
 - `one_sentence_project_essence`.
 - `workflow_status`, describing workflow readiness only.
 - `current_material_maturity`.
-- 3 preliminary highlights.
-- 3 key risks / counter-hypotheses.
-- 3 next verification priorities.
+- selected preliminary highlights.
+- selected key risks / counter-hypotheses.
+- prioritized next verification items.
 - Recommended next skill to run, framed as workflow guidance only.
 
 ## Optional Source References

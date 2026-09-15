@@ -8,19 +8,28 @@
 - source date and source owner if known
 - known confidentiality boundary
 
+## v0.2 Required Context
+
+In addition to the minimum list above, provide the research need, evidence `as_of`, source type/owner, source date and effective period, known current/historical/superseded status, conflicts, and confidentiality boundary when available. Use only the minimum relevant held materials; this input contract does not authorize full external research.
+
+Follow [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md). Missing authority, date, currentness, or conflict information remains Unknown.
+
 ## Source References
 
 When available, cite source references using a lightweight `source_id` such as filename, page number, section title, interview date, or spreadsheet tab. Do not fabricate source IDs when the source location is unavailable.
 
-## Accepted Evidence Labels
+## Common Evidence Labels (not exhaustive)
 
 - user_provided
 - company_claim
 - interview_note
 - financial_snapshot
 - third_party_unverified
+- independent_evidence
 - inferred
+- unknown
 - missing_evidence
+- conflict
 - needs_human_review
 
 ## Input Boundary

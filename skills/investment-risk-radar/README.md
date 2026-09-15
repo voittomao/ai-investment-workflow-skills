@@ -11,18 +11,15 @@ Use this skill after quick-look analysis, before diligence planning, or whenever
 ## What It Produces
 
 - risk radar table
-- risk category
-- linked logic/highlight/counter-hypothesis
-- risk signal
-- evidence status
-- impact if true
-- priority
-- diligence action
-- material request
+- linked thesis and failure mechanism
+- evidence signal and fastest falsifier
+- judgment sensitivity
+- DD priority
+- diligence action, target source, and material request
 
 ## Evidence Discipline
 
-This skill must separate facts, company claims, interview notes, financial snapshots, analytical inferences, missing evidence, and items that need human review.
+This skill follows the repository's [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md). Risk hypotheses and proposed tests are analysis and verification actions, not evidence.
 
 ## AI InvestOS Module Mapping
 

@@ -10,19 +10,15 @@ Use this skill when a team needs to move from investor-style risk thinking to ac
 
 ## What It Produces
 
-- DD issue map
-- question or task
-- target source
-- evidence needed
-- supporting signal
-- breaking signal
-- material request
-- priority
-- expected next action
+- judgment- and risk-linked research needs
+- qualitative Value of Information and verification targets
+- focused interview questions, material requests, data checks, or tests
+- support, weaken, break, and remain-Unknown signals
+- expected judgment impact and next action
 
 ## Evidence Discipline
 
-This skill must separate facts, company claims, interview notes, financial snapshots, analytical inferences, missing evidence, and items that need human review.
+This skill follows the repository's [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md). Questions and requests remain verification actions, not evidence; question count is not a quality measure.
 
 ## AI InvestOS Module Mapping
 

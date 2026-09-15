@@ -9,6 +9,12 @@
 - `known_limitations`：已知缺口、冲突和不可使用范围。
 - `sensitive_boundary`：保密、隐私和外部模型使用限制。
 
+## v0.2 必需上下文
+
+应提供历史判断及 `prior_judgment_as_of`、历史证据边界、新增逻辑材料及日期/生效期间、新证据及 `evidence_as_of`、既有逻辑/风险/DD/未知项、冲突或替代关系，以及本次更新要服务的判断问题。
+
+统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)。新增材料可能不形成证据变化，证据变化也可能不形成判断变化。
+
 ## Source References / 来源引用
 
 如条件允许，可用轻量 `source_id` 标注来源，例如文件名、页码、章节、访谈日期或表格 tab。若无法确认来源位置，不得编造 source_id。

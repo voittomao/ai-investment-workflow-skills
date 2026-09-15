@@ -1,5 +1,13 @@
 # Quality Checklist: Investment Evidence Audit
 
+## v0.2 Contract Checks
+
+- [ ] Each material claim is checked against source support, authority, independence, date/currentness, and fit.
+- [ ] Company claim, independent evidence, inference, Unknown, and conflict remain distinct.
+- [ ] Stale evidence and unsupported state or temporal inference are detected.
+- [ ] Generated analysis is never accepted as source evidence for itself.
+- [ ] The output gives the smallest corrective action, Human Review item, and circulation boundary under [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md).
+
 - [ ] The output keeps the investor-style company research lens.
 - [ ] The input boundary is explicit.
 - [ ] All examples are fictional when used publicly.

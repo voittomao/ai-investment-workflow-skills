@@ -1,6 +1,8 @@
 # 投资分析证据边界审计
 
-`investment-evidence-audit` 是一项一级市场投研 workflow skill，用于：审查投资分析文本中的事实、公司口径、访谈陈述、推断、投资观点和信息缺口，识别过度确定性、缺失引用、虚假精确、禁止性结论，并给出保留判断力度的改写建议。
+`investment-evidence-audit` 用于审计陈述—证据关系，检查来源支持、权威性、独立性、日期/时效性、公司口径与独立证据、推断/未知/冲突、过期证据、状态越界和生成分析冒充证据。
+
+统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)；英文 `skill.md` 为 canonical authority。
 
 ## 何时使用
 

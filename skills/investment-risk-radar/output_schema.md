@@ -2,6 +2,10 @@
 
 Use this schema as a reference shape. It is intentionally lightweight so teams can adapt it to Markdown, JSON, tables, or internal tools.
 
+## v0.2 Required Semantics
+
+The JSON below is a minimum container, not the complete canonical contract. Each material risk must also state `linked_thesis_or_assumption`, `why_thesis_may_fail`, evidence status/signal, `fastest_falsifier`, `judgment_sensitivity`, `dd_priority`, target source/material request, and Human Review boundary. Follow [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md).
+
 ```json
 {
   "skill": "investment-risk-radar",

@@ -9,6 +9,12 @@
 - `known_limitations`：已知缺口、冲突和不可使用范围。
 - `sensitive_boundary`：保密、隐私和外部模型使用限制。
 
+## v0.2 必需上下文
+
+还应提供本次要回答的判断问题、证据 `as_of`、材料冲突，以及可获得的最小相关公司/产品/客户/商业/竞争/财务证据。若输入不足以形成有边界的假设，应保留未知项并回到资料分诊。
+
+统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)。业务理解与投资判断候选必须分开。
+
 ## Source References / 来源引用
 
 如条件允许，可用轻量 `source_id` 标注来源，例如文件名、页码、章节、访谈日期或表格 tab。若无法确认来源位置，不得编造 source_id。

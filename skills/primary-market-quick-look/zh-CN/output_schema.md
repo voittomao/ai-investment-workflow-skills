@@ -2,6 +2,10 @@
 
 ## Schema
 
+## v0.2 必需语义
+
+下方 JSON 是最小容器，不是完整 canonical 合同。v0.2 输出必须包含：业务理解、项目本质、投资判断候选、逻辑因果链、最强反方、证伪条件、最快证伪、最高价值下一证据、风险/冲突/未知项和下一步验证。3/3/3 快照只能作为可选展示，不能成为分析主线。统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)。
+
 ```json
 {
   "executive_snapshot": {
@@ -82,16 +86,16 @@
 }
 ```
 
-## Executive Snapshot / 5-minute brief
+## 可选 Executive Snapshot / 5-minute brief
 
-快速初判输出开头应包含：
+该历史快照结构可以作为可选展示，但不能替代 v0.2 判断主线。如使用，应包含：
 
 - `one_sentence_project_essence`。
 - `workflow_status`，仅描述工作流状态。
 - `current_material_maturity`。
-- 3 个初步亮点。
-- 3 个关键风险 / 反方假设。
-- 3 个下一步验证重点。
+- 经选择的初步亮点。
+- 经选择的关键风险 / 反方假设。
+- 按优先级排列的下一步验证事项。
 - 推荐的下一步 skill，且仅作为 workflow 建议。
 
 ## Optional Source References / 可选来源引用

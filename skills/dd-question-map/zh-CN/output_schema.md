@@ -2,6 +2,10 @@
 
 ## Schema
 
+## v0.2 必需语义
+
+下方 JSON 是最小容器，不是完整 canonical 合同。每个高优先级事项还必须表达：对应判断/风险、研究需要、定性信息价值、验证目标、支持/削弱/推翻/仍未知信号、预期判断影响和人工复核边界。统一语义见 [Shared Evidence Semantics](../../../EVIDENCE_SEMANTICS.md)。
+
 ```json
 {
   "recommended_next_workflow_step": "string",
