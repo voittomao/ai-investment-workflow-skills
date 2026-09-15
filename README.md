@@ -35,12 +35,12 @@ This is not a prompt collection. It is a small workflow package: each skill defi
 
 This repository helps turn company materials into structured investor-style research:
 
-1. Triage source materials and evidence boundaries.
-2. Produce a quick-look company analysis.
-3. Map investment logic into risk hypotheses.
-4. Convert risks into diligence questions and material requests.
-5. Update the analysis when new materials arrive.
-6. Audit the draft before an investment workpaper is circulated.
+1. Triage held source materials, authority, currentness, conflicts, and evidence boundaries.
+2. Form a quick-look judgment candidate through project essence, thesis, strong counter, falsification, and Value of Information.
+3. Map investment logic into thesis-linked risks and fastest falsifiers.
+4. Convert risks into diligence questions, material requests, and expected judgment impact.
+5. Separate Material Delta, Evidence Delta, and Judgment Delta when new information arrives.
+6. Audit claim support and overreach before an investment workpaper is circulated.
 
 Commercial and business model understanding are core objects inside the investment research workflow. They are not positioned here as a generic business-analysis slogan.
 
@@ -60,7 +60,7 @@ Recommended first run:
 When new materials arrive:
 
 - [`versioned-investment-update`](skills/versioned-investment-update/README.md)
-  Reason: preserves V1/V2 judgment changes instead of simply overwriting the prior report.
+  Reason: separates Material, Evidence, and Judgment Deltas instead of simply overwriting the prior report.
 
 Before circulating a workpaper:
 
@@ -83,12 +83,12 @@ flowchart LR
 
 | Skill | Role | Main Output |
 | --- | --- | --- |
-| [`source-material-triage`](skills/source-material-triage/README.md) | Classify project materials and evidence boundaries | Material inventory, maturity, missing materials |
-| [`primary-market-quick-look`](skills/primary-market-quick-look/README.md) | First-pass investor-style company view | Project essence, investment logic, highlights, counter-hypotheses |
-| [`investment-risk-radar`](skills/investment-risk-radar/README.md) | Risk mapping from logic and evidence gaps | Linked risk hypotheses and verification actions |
-| [`dd-question-map`](skills/dd-question-map/README.md) | Diligence execution map | Interview questions, material requests, data checks, technical and transaction validation |
-| [`versioned-investment-update`](skills/versioned-investment-update/README.md) | Update analysis after new materials | V1/V2 judgment change summary |
-| [`investment-evidence-audit`](skills/investment-evidence-audit/README.md) | Evidence boundary quality gate | Overstatement flags and rewrite suggestions |
+| [`source-material-triage`](skills/source-material-triage/README.md) | Bound what held materials can support | Source authority/currentness, conflicts, maturity, evidence boundary, missing evidence |
+| [`primary-market-quick-look`](skills/primary-market-quick-look/README.md) | Form a first investment judgment candidate | Project essence, causal thesis, strong counter, falsifier, highest-value next evidence |
+| [`investment-risk-radar`](skills/investment-risk-radar/README.md) | Map how the thesis may fail | Linked failure modes, fastest falsifiers, judgment sensitivity, DD priority |
+| [`dd-question-map`](skills/dd-question-map/README.md) | Design decision-changing diligence | Research needs, verification targets, questions/requests, expected judgment impact |
+| [`versioned-investment-update`](skills/versioned-investment-update/README.md) | Explain what truly changed after new information | Material Delta, Evidence Delta, Judgment Delta, candidate update |
+| [`investment-evidence-audit`](skills/investment-evidence-audit/README.md) | Audit evidence boundary before circulation | Claim-support, authority/currentness, conflict, state-overreach, and rewrite findings |
 
 ## Quick Start / How to Use
 
@@ -128,18 +128,45 @@ The skills define workflow contracts: what inputs are acceptable, how evidence s
 
 Humans remain responsible for review, judgment, follow-up questions, and any business or investment decision. This repository does not include production orchestration code, model integrations, API connectors, or a built-in CLI.
 
-## Evidence Labels
+## Shared Evidence Semantics
 
-Use these labels consistently:
+All six Skills use one lightweight public vocabulary for source, source type/date, `as_of`, qualitative authority/evidence strength, company claims, independent evidence, interview notes, financial snapshots, inference, Unknown/missing evidence, conflict, and Human Review.
 
-- `user_provided`: material provided by the user.
-- `company_claim`: company statement that has not been independently verified.
-- `interview_note`: interview note or meeting summary.
-- `financial_snapshot`: financial or operating data snapshot.
-- `third_party_unverified`: third-party material that still requires verification.
-- `inferred`: analytical inference made from available material.
-- `missing_evidence`: required evidence not yet available.
-- `needs_human_review`: item requiring human review before circulation.
+See [Shared Evidence Semantics](EVIDENCE_SEMANTICS.md). The five invariants are:
+
+1. Company claim is not verified fact.
+2. Generated analysis is not source evidence.
+3. A newer document is not automatically current truth.
+4. Unknown remains explicit.
+5. Human Review remains required for professional use.
+
+## Research Modes
+
+Research Mode describes the task's current information state. It is not a new Skill and this repository does not include a mode engine.
+
+| Mode | Entry state | How to use the Skills |
+| --- | --- | --- |
+| **Greenfield** | Little or no usable internal material | Establish an initial public evidence base, then use the relevant Skills to form and test a bounded view |
+| **Material-led** | BP, interviews, financial, operating, or other internal materials are available | Start from held materials; add external corroboration or contradiction only where it serves the decision question |
+| **Deep DD** | A prior view and critical hypotheses or risks already exist | Use Risk Radar and DD Question Map to target the evidence most likely to change the judgment |
+| **Incremental Update** | A historical judgment exists and new material or events arrive | Use Versioned Investment Update to separate Material, Evidence, and Judgment Deltas |
+
+The user or surrounding workflow selects a mode based on the entry state and then composes the needed Skills. A decision objective—such as company research, DD verification, comparative/sector research, or transaction review—is a separate question from Research Mode. Transaction-driven work is therefore not a fifth mode.
+
+## Professional Skills Inside a Governed Workflow
+
+These Skills define professional research actions. In a broader system they may run inside a governed workflow that supplies context, tools, privacy controls, continuity, and Human Review. The generated output remains a candidate for professional review; it does not automatically become an accepted or current judgment.
+
+This public repository does not implement routing, approval state, experience/Wiki systems, Skill evolution, evaluation infrastructure, recovery, or private transaction handling.
+
+## Capabilities Under Real-World Validation
+
+Two possible professional actions remain **Candidates**, not formal Skills:
+
+- **External Research & Evidence Build:** testing whether `Research Need → Source Discovery → Source Authority → Independent Corroboration → Conflict → Evidence Build → Stop Condition` forms a stable contract across Greenfield and Material-led work.
+- **Follow-on / Transaction Review:** testing whether `Historical Case → Evidence Delta → Company Judgment Delta → Transaction Terms → Company Judgment vs Transaction Judgment` produces independent value across more than one real project.
+
+The repository still contains six formal Skills. No Candidate is promoted until its professional objective, input/process/output contract, cross-scenario repeatability, and value beyond composition of existing Skills have been validated and reviewed by humans.
 
 ## Public Boundary
 

@@ -2,92 +2,89 @@
 
 ## 1. Skill Objective
 
-This skill is used to turn risk hypotheses into a structured diligence question map across management, technology, customer, commercial, financial, operational, legal, transaction, and third-party validation workstreams.
+This skill turns investment judgments and prioritized risks into a focused diligence map. Every high-priority item should answer: **What answer would change the judgment?**
+
+Its working chain is:
+
+`Judgment or Risk → Research Need → Value of Information → Verification Target → Interview Question / Material Request → Expected Judgment Impact`
 
 ## 2. Suitable Use Cases
 
-Use this skill when a team needs to move from investor-style risk thinking to actionable diligence execution.
+Use this skill when a team must move from risk thinking to executable management, technology, customer, commercial, financial, operational, legal, transaction, or third-party diligence.
 
 ## 3. Not Suitable For
 
-Do not reduce diligence to interview questions only. Do not create questions that assume unverified facts are true.
+Do not reduce diligence to interview questions, reward question count, or create broad checklists disconnected from a judgment. Do not create questions that assume unverified facts are true, and do not treat a question or material request as supporting evidence.
 
 ## 4. Input Requirements
 
-Inputs should be anonymized or permissioned, source-bounded, and limited to the minimum materials needed for the task:
+Inputs should be anonymized or permissioned and limited to the minimum relevant context:
 
-- risk radar
-- quick-look analysis
-- known material gaps
-- available target sources
-- human review priorities
+- current Investment Judgment Candidate and Thesis Candidate;
+- risk radar and judgment sensitivities;
+- known evidence gaps and conflicts;
+- available target sources and access constraints;
+- prior diligence results, if any;
+- human priorities and the decision the DD must inform.
 
 ## 5. Output Requirements
 
-The output should be structured, evidence-aware, and usable by an investment, strategy, or diligence team:
+For each material issue, state:
 
-- DD issue map
-- question or task
-- target source
-- evidence needed
-- supporting signal
-- breaking signal
-- material request
-- priority
-- expected next action
+- linked judgment, thesis assumption, or risk;
+- precise research need;
+- Value of Information and priority rationale;
+- verification target and best available target source;
+- interview question, material request, data check, test, or third-party validation task;
+- evidence that would support, weaken, or break the view;
+- expected judgment impact for plausible answer branches; and
+- next action, owner, or escalation for Human Review when relevant.
 
-## 6. Evidence Label Rules
+## 6. Shared Evidence Semantics
 
-Use these labels:
+Follow the repository's [Shared Evidence Semantics](../../EVIDENCE_SEMANTICS.md). Existing evidence may motivate a DD item, but questions, requests, planned searches, and expected answers are verification actions—not evidence.
 
-- user_provided
-- company_claim
-- interview_note
-- financial_snapshot
-- third_party_unverified
-- inferred
-- missing_evidence
-- needs_human_review
-
-When available, cite source references using a lightweight `source_id` such as filename, page number, section title, interview date, or spreadsheet tab. Do not fabricate source IDs when the source location is unavailable.
-
-Never treat a `company_claim` as verified fact. Use `inferred` for analytical judgment and `missing_evidence` when a conclusion cannot be supported. Use `needs_human_review` before the output is circulated.
+Preserve Unknown and conflict until the requested evidence is actually obtained and reviewed.
 
 ## 7. Prohibited Wording
 
-Do not output investment recommendations, securities trading advice, legal advice, financial advice, tax advice, or deterministic conclusions. Do not invent customers, revenue, financing, valuation, technical metrics, transaction terms, or founder backgrounds.
+Do not output investment recommendations or invent customers, revenue, financing, valuation, technical metrics, transaction terms, or founder backgrounds. Do not imply that asking a question, receiving a company response, or requesting a document resolves the underlying risk.
 
-Avoid wording that implies certainty when evidence is incomplete. Examples of prohibited conclusion patterns include unconditional outcome language, no-risk language, verified-growth language, automatic investment decisions, or final investment-call language.
+Do not generate intrusive, unauthorized, or legally improper requests. Specialist legal, financial, tax, privacy, and technical scope remains subject to qualified professional review.
 
 ## 8. Process
 
-1. Group questions by diligence category.
-2. Match each question to a risk or investment logic.
-3. Define what evidence would support or break the view.
-4. Assign target sources and output formats.
-5. Keep material requests separate from interview prompts.
+1. Start from the judgment or risk that may change; do not start from a generic category checklist.
+2. Define the unresolved research need and why it matters now.
+3. Assess Value of Information qualitatively using expected judgment impact, uncertainty resolved, accessibility, time, and cost.
+4. Choose the verification target and the source most capable of answering it.
+5. Design the smallest useful interview question, material request, data check, technical test, customer reference, or third-party task.
+6. State support, weaken, break, and remain-Unknown signals, plus their expected judgment impact.
+7. Prioritize the issue and define the next action. Do not optimize for the number of questions.
 
 ## 9. Output Format
 
-Use Markdown tables or JSON-like structured sections. Every material claim should carry an evidence label or an explicit note that it needs human review.
+Use a concise DD issue map or lightweight structured sections.
 
 Core fields:
 
-- dd_id
-- dd_category
-- dd_type
-- question_or_task
-- target_source
-- linked_risk
-- evidence_needed
-- support_signal
-- break_signal
-- priority
+- `dd_id`
+- `linked_judgment_or_risk`
+- `research_need`
+- `value_of_information`
+- `verification_target`
+- `target_source`
+- `interview_question`
+- `material_request_or_other_task`
+- `support_weaken_break_unknown_signals`
+- `expected_judgment_impact`
+- `priority_and_next_action`
+- `needs_human_review`
 
 ## 10. Human Review Requirement
 
-Human review is mandatory before the output is used in an investment workpaper, diligence plan, committee discussion, founder feedback, or business decision process.
+Human review is mandatory. The responsible team confirms necessity, proportionality, permissions, wording, target source, specialist scope, and how obtained evidence should change the judgment.
 
 ## 11. AI InvestOS Module Mapping
 
-This skill maps to: **Core validation issue map / DD execution**.
+This skill maps to: **Judgment-linked DD map / verification design / expected decision impact**.
