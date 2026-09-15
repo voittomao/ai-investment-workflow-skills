@@ -1,89 +1,108 @@
 # NovaCompute End-to-End Example
 
-This is a fully fictional example showing how the six workflow skills can work together. NovaCompute is not a real company. All numbers, materials, customers, revenue, financing, valuation, and transaction terms are fictional examples.
+This fully fictional example shows how a first-time user can combine the six formal Skills without knowing AI InvestOS or any private system. NovaCompute is not a real company; every material, metric, customer, and transaction reference below is synthetic.
+
+For each step, give an AI assistant the relevant `skill.md`, `input_contract.md`, `output_schema.md`, and `quality_checklist.md` together with the fictional materials. The outputs remain working candidates for Human Review.
 
 ## Case Boundary
 
-- Company: NovaCompute
-- Sector: Fictional AI training platform sample company
-- Material package: fictional BP, fictional product note, fictional CFO/CTO notes, fictional sample pipeline
-- Evidence boundary: all examples require human review
-- Advice boundary: no investment, legal, financial, tax, or securities trading advice
+- Evidence `as_of`: 2026-08-31 (fictional).
+- Initial held materials: a fictional BP, a one-page product note, and company-claimed operating metrics.
+- Later materials: fictional monthly operating data, a management interview note, and an unverified third-party article.
+- Advice boundary: no investment, legal, financial, tax, or securities advice.
+
+## Journey A — Material-led First Look
 
 ## 1. Source Material Triage
 
-**Purpose:** Identify what each project material can and cannot support before analysis begins.
+This is **Material-led** because internal company materials already exist. Start with `source-material-triage` to establish what the held materials can support.
 
-**Fictional input:** NovaCompute provides a fictional BP, fictional product note, fictional CFO/CTO notes, and fictional sample pipeline data. All figures are fictional examples.
+- **Research need:** determine whether the held package supports a bounded first look.
+- **Material maturity / minimum relevant context:** company-only and source-limited; sufficient to frame hypotheses, not to verify an investment judgment.
 
-**Representative output:** The workflow captures `case_name, material_maturity, materials, evidence_boundary` and marks evidence as `company_claim`, `interview_note`, `financial_snapshot`, `inferred`, `missing_evidence`, or `needs_human_review`.
+| Source | Type / date | Authority and currentness | Usable for | Not usable for |
+| --- | --- | --- | --- | --- |
+| Fictional BP | Company material / 2026-08-01 | `company_claim`; currentness not independently confirmed | Company narrative, product positioning | Verified customer, revenue, or performance facts |
+| Product one-pager | Company material / 2026-08-03 | `company_claim`; marketing scope | Claimed workflow and feature set | Independent differentiation |
+| Operating metrics page | Company report / August 2026 | `company_claim`; definitions and period need review | Testable operating claims | Verified usage, retention, or cash collection |
 
-**Human review:** Required before the output becomes part of an investment workpaper.
+- **Conflict:** none observed across the held documents; absence of conflict is not independent confirmation.
+- **Missing evidence:** metric definitions, cohort retention, customer-level usage, contracts/cash evidence, reproducible benchmark records, and independent market/competition sources.
+- **Human Review:** confirm permission, dates, relevance, and whether this boundary is sufficient for a quick look.
 
 ## 2. Primary-Market Quick-Look
 
-## Executive Snapshot / 5-minute brief
+- **Business Understanding:** NovaCompute is presented as software for orchestrating AI-training workloads. `company_claim`
+- **Project Essence:** the investment question is whether the product creates reproducible, recurring software value beyond cloud-native, open-source, or service-heavy alternatives. `inferred`
+- **Investment Judgment Candidate:** the problem is intelligible, but differentiation, retention, and software economics remain unverified. `inferred` `missing_evidence`
+- **Thesis Candidate / causal chain:** reproducible efficiency gain → embedded customer workflow → high renewal → recurring software economics. `inferred`
+- **Strongest Counter:** selected benchmarks and services work may create apparent performance and retention without durable product differentiation. `inferred`
+- **Falsification:** representative workloads fail to reproduce the claimed gain, or customer cohorts show weak renewal and heavy implementation dependence. `missing_evidence`
+- **Highest-value next evidence:** permissioned cohort retention plus customer-level usage and cash evidence, because it tests both recurring value and commercial quality. `missing_evidence`
+- **Next Verification:** run `investment-risk-radar`; send its highest-sensitivity risks to `dd-question-map`.
+- **Human Review:** confirm the problem definition, evidence sufficiency, counter-thesis, and whether targeted DD is warranted.
 
-- **One-sentence project essence:** NovaCompute is a fictional AI training workflow platform that claims to improve training orchestration and resource efficiency. `inferred`
-- **Workflow status:** ready for risk radar; needs more materials before DD question map. `inferred`
-- **Current material maturity:** Fictional BP-style materials plus limited notes; suitable for a quick-look demo, not a decision-ready workpaper. `missing_evidence`
-- **3 preliminary highlights:** Clear operational pain point, claimed benchmark improvement, and early fictional customer interest. `company_claim`
-- **3 key risks / counter-hypotheses:** Benchmark claims may not reproduce, cloud-native tools may be good enough, and services work may dilute software economics. `inferred`
-- **3 next verification priorities:** Reproduce benchmarks, validate real usage, and separate subscription revenue from services or resale. `missing_evidence`
-- **Recommended next skill to run:** `investment-risk-radar`, then `dd-question-map` if diligence execution is needed.
+## Journey B — Deep DD
 
-**Purpose:** Create a first-pass investor-style view of a company without overstating the evidence.
-
-**Fictional input:** NovaCompute provides a fictional BP, fictional product note, fictional CFO/CTO notes, and fictional sample pipeline data. All figures are fictional examples.
-
-**Representative output:** The workflow captures `project_essence, business_model, investment_logic, highlights` and marks evidence as `company_claim`, `interview_note`, `financial_snapshot`, `inferred`, `missing_evidence`, or `needs_human_review`.
-
-**Human review:** Required before the output becomes part of an investment workpaper.
+The prior judgment is: “The core thesis depends on high renewal, but current support is mainly company claim.” This is **Deep DD**.
 
 ## 3. Investment Risk Radar
 
-**Purpose:** Turn highlights, assumptions, and evidence gaps into risk hypotheses and verification actions.
-
-**Fictional input:** NovaCompute provides a fictional BP, fictional product note, fictional CFO/CTO notes, and fictional sample pipeline data. All figures are fictional examples.
-
-**Representative output:** The workflow captures `risk_id, risk_title, risk_category, linked_logic` and marks evidence as `company_claim`, `interview_note`, `financial_snapshot`, `inferred`, `missing_evidence`, or `needs_human_review`.
-
-**Human review:** Required before the output becomes part of an investment workpaper.
+| Linked thesis | Why it may fail | Evidence signal | Fastest falsifier | Judgment sensitivity | DD priority | Target / next action |
+| --- | --- | --- | --- | --- | --- | --- |
+| High renewal proves recurring value | Reported renewal may exclude churned pilots or include service-led contracts | Cohort definition, eligible denominator, contract status, usage and cash | Reconcile one permissioned renewal cohort from eligible customers through contract, usage, invoice, and cash | Low true renewal materially weakens recurring-value and software-economics judgments | Verify first | Permissioned customer-level cohort; request reconciliation table |
 
 ## 4. DD Question Map
 
-**Purpose:** Convert risks into executable diligence questions, material requests, data checks, and expert validation.
+| Research need | Value of Information | Verification target | Question / material request | What answer changes the judgment? |
+| --- | --- | --- | --- | --- |
+| Establish true renewal | High: directly tests the core thesis | Eligible customer cohort | Provide cohort rules and customer-level start, renewal, churn, usage, invoice, and cash fields | Low renewal or service-only renewal weakens the thesis; consistent paid renewal strengthens it; incomplete fields retain Unknown |
+| Separate product pull from services | High: tests scalability | Delivery effort by renewed customer | Provide implementation hours, support hours, reusable components, and exceptions | Persistent heavy customization weakens software scalability even if contracts renew; inaccessible customer-level data retains Unknown |
 
-**Fictional input:** NovaCompute provides a fictional BP, fictional product note, fictional CFO/CTO notes, and fictional sample pipeline data. All figures are fictional examples.
+Questions and requests are verification actions, not evidence. Human reviewers confirm permissions, proportionality, target sources, and how obtained answers should move the judgment.
 
-**Representative output:** The workflow captures `dd_id, dd_category, dd_type, question_or_task` and marks evidence as `company_claim`, `interview_note`, `financial_snapshot`, `inferred`, `missing_evidence`, or `needs_human_review`.
+## Journey C — Incremental Update and Evidence Audit
 
-**Human review:** Required before the output becomes part of an investment workpaper.
+Assume a V1 judgment dated 2026-08-31. In September, fictional monthly operating data, a management interview, and an unverified third-party article arrive. This is **Incremental Update**.
 
 ## 5. Versioned Investment Update
 
-**Purpose:** Explain how new materials change the prior view instead of overwriting the old report.
+| Delta | Synthetic result |
+| --- | --- |
+| Prior judgment / `as_of` | Retention is central but unverified as of 2026-08-31 |
+| Material Delta | Three new logical materials arrived |
+| Evidence Delta | Company data and interview add detail but remain company-side claims; the article adds a non-independent/unverified market signal |
+| Judgment Delta — strengthened | None yet; no independent customer or cash evidence |
+| Judgment Delta — weakened | Confidence in the headline renewal metric declines if cohort definitions differ across materials |
+| Judgment Delta — unchanged | Recurring customer value remains the core question |
+| Still Unknown | Eligible denominator, churned pilots, paid renewal, usage depth, service intensity |
+| Risk / DD change | Cohort-definition conflict becomes verify-first; request customer-level renewal, usage, and cash reconciliation |
+| Candidate update | Retain the V1 boundary and prioritize cohort reconciliation; do not overwrite history |
 
-**Fictional input:** NovaCompute provides a fictional BP, fictional product note, fictional CFO/CTO notes, and fictional sample pipeline data. All figures are fictional examples.
-
-**Representative output:** The workflow captures `version_id, material_change, strengthened, weakened` and marks evidence as `company_claim`, `interview_note`, `financial_snapshot`, `inferred`, `missing_evidence`, or `needs_human_review`.
-
-**Human review:** Required before the output becomes part of an investment workpaper.
+Human Review confirms the historical baseline, source authority/currentness, conflicts, and whether any candidate update should be adopted.
 
 ## 6. Investment Evidence Audit
 
-**Purpose:** Review an investment workpaper for evidence discipline before circulation.
+| Draft claim | Finding | Smallest corrective action |
+| --- | --- | --- |
+| “Renewal proves strong product-market fit.” | Company-reported metric lacks cohort, usage, and cash support; overclaim | Attribute the claim, state the missing denominator, and retain the judgment as Unknown pending cohort evidence |
+| “An independent report confirms market leadership.” | The article's independence, date, and method are unverified | Describe it as an unverified third-party report and request source/method review |
+| “The risk is resolved after management explained it.” | Interview explanation is not resolution evidence; unsupported state inference | Record the explanation as `interview_note`; keep the risk open for Human Review |
 
-**Fictional input:** NovaCompute provides a fictional BP, fictional product note, fictional CFO/CTO notes, and fictional sample pipeline data. All figures are fictional examples.
+The audit does not approve circulation. A human decides whether support is sufficient and whether the workpaper may be used.
 
-**Representative output:** The workflow captures `finding_id, text_span, issue_type, evidence_label` and marks evidence as `company_claim`, `interview_note`, `financial_snapshot`, `inferred`, `missing_evidence`, or `needs_human_review`.
+## Journey D — Greenfield Honesty Boundary
 
-**Human review:** Required before the output becomes part of an investment workpaper.
+With no internal material, the mode is **Greenfield**. The six formal Skills do **not** include a complete external source-discovery Skill. `External Research & Evidence Build` remains a Candidate under real-world validation.
+
+A user may collect permissioned public materials with their ordinary browser, research tool, or AI assistant, recording source, publisher, date, `as_of`, and access boundary. Once a bounded source set exists:
+
+1. run `source-material-triage` to classify authority, currentness, conflicts, and missing evidence;
+2. run `primary-market-quick-look` only if the source set supports a bounded hypothesis; and
+3. retain Unknown and request evidence when it does not.
+
+This repository does not claim to perform automatic web discovery, provide a production CLI, or supply a seventh formal Skill.
 
 ## End State
 
-The final artifact is an investment analysis workpaper draft that remains source-bounded, evidence-labeled, and subject to human review. It does not decide whether to invest and does not replace professional diligence or investment committee review.
-
-## Recommended next workflow step
-
-After this end-to-end demo, teams can rerun the relevant skill rather than the full chain. For example, run `investment-risk-radar` when risk profile changes, `versioned-investment-update` when new materials arrive, and `investment-evidence-audit` before circulation.
+The six Skills produce a source-bounded working judgment, thesis-linked risks, decision-changing DD, a traceable candidate update, and an evidence audit. Human Review remains responsible for evidence sufficiency, exceptions, judgment adoption, risk acceptance, and any business or investment decision.

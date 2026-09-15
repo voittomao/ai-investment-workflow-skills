@@ -6,7 +6,7 @@
 
 一套以一级市场投资研究为主线的 AI workflow skills，用于系统理解一家公司的业务本质、商业模式、关键风险、尽调问题、版本变化与证据边界。
 
-[查看 NovaCompute 端到端虚构案例](examples/nova_compute_end_to_end.md) · [查看发布检查表](RELEASE_CHECKLIST.md) · [参与贡献](CONTRIBUTING.md) · [查看变更记录](CHANGELOG.md)
+[查看 NovaCompute 端到端虚构案例](examples/nova_compute_end_to_end.zh-CN.md) · [查看发布检查表](RELEASE_CHECKLIST.md) · [参与贡献](CONTRIBUTING.md) · [查看变更记录](CHANGELOG.md)
 
 ## 适合谁使用
 
@@ -116,7 +116,7 @@ skills 负责定义工作流和边界：哪些输入可接受、证据如何标�
 
 - [investment-evidence-audit](skills/investment-evidence-audit/README.md)：检查证据边界、过度确定性和人工复核要求。
 
-随后可阅读 [NovaCompute 端到端案例](examples/nova_compute_end_to_end.md)，查看六个 skills 如何串联为完整 workflow。
+随后可阅读 [NovaCompute 端到端案例](examples/nova_compute_end_to_end.zh-CN.md)，查看六个 skills 如何串联为完整 workflow。
 
 ## 统一证据语义
 
@@ -184,7 +184,8 @@ AI InvestOS 将这些 skills 进一步组织为资料分诊、项目研判、风
 ├── CHANGELOG.md
 ├── RELEASE_CHECKLIST.md
 ├── examples/
-│   └── nova_compute_end_to_end.md
+│   ├── nova_compute_end_to_end.md
+│   └── nova_compute_end_to_end.zh-CN.md
 └── skills/
     ├── source-material-triage/
     ├── primary-market-quick-look/
