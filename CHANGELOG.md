@@ -2,15 +2,19 @@
 
 ## Unreleased
 
-### Added
-- Quick Start guidance for using skills with AI assistants, Codex, and local file-based workflows.
-- Executive Snapshot section for primary-market quick-look outputs.
-- Recommended next workflow step guidance across skills.
-- Lightweight source_id guidance for evidence references.
+_No unreleased changes._
 
-### Changed
-- Clarified that CLI examples are conceptual wrappers, not built-in production commands.
-- Strengthened human review and evidence boundary language.
+## v0.2.0
+
+- Adds shared evidence semantics for source authority, date/currentness, conflicts, explicit Unknowns, and required Human Review.
+- Refactors Quick Look around `Project Essence → Thesis Candidate → Strong Counter → Falsification → Value of Information → Next Verification`.
+- Links Risk Radar to thesis failure modes, fastest falsifiers, judgment sensitivity, and DD priority.
+- Refocuses DD Question Map on Value of Information and the expected impact of each answer on the judgment.
+- Separates `Material Delta`, `Evidence Delta`, and `Judgment Delta` in Versioned Investment Update instead of overwriting prior judgment.
+- Expands Evidence Audit to detect authority/currentness gaps, conflicts, generated analysis presented as evidence, and unsupported state overreach.
+- Documents four Research Modes—Greenfield, Material-led, Deep DD, and Incremental Update—without turning them into new Skills.
+- Keeps External Research & Evidence Build and Follow-on / Transaction Review as Candidates under real-world validation; the formal Skill count remains six.
+- Improves first-run usability with clearer navigation and a teaching-oriented Chinese NovaCompute walkthrough; all examples remain fictional, with no private runtime or project data included.
 
 ## v0.1.1
 
