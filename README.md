@@ -1,14 +1,14 @@
 # AI Investment Workflow Skills
 
-**Evidence-disciplined workflow skills for investor-style company research, diligence, judgment updates, and review.**
+**Evidence-disciplined company research workflows, born from primary-market investing.**
 
 [中文说明](README.zh-CN.md) · [Fictional end-to-end example](examples/nova_compute_end_to_end.md)
 
 ## 30-Second Overview
 
-The hard part of company research is often not finding information. It is keeping materials, evidence, judgment, and updates from collapsing into one another: company claims become facts, research conclusions lack a serious counter-thesis, diligence produces long question lists that may not change the view, and new documents silently overwrite the old judgment. AI can make the result look complete while leaving it hard to trace or review.
+The hard part of company research is not just finding information. It is turning scattered materials into a clear view of what the company actually does, which problem it solves, why customers need it, how the business may work, what drives the thesis, where it may fail, and what remains a company claim or research hypothesis. AI can summarize every document; reading everything is not the same as understanding the company.
 
-This repository separates those problems into six reusable Skills: bound what held materials can support; form a falsifiable judgment candidate; connect risks to the thesis; prioritize diligence by its value to the decision; separate Material, Evidence, and Judgment Deltas; and audit overreach before circulation. Each Skill has an explicit input contract, output structure, evidence semantics, and quality checks. That is what makes this a workflow package rather than a prompt collection.
+This repository separates that work into six reusable Skills: bound what held materials can support; identify the business essence and causal logic; form a structured judgment candidate; challenge it with evidence, a strong counter-thesis, and falsification; decide what to verify next; distinguish Material, Evidence, and Judgment Deltas; and audit overreach before circulation. Each Skill has an explicit input contract, output structure, evidence semantics, and quality checks. That is what makes this a workflow package rather than a prompt collection.
 
 AI can help gather and challenge evidence, surface counter-arguments, prioritize diligence, preserve judgment history, and make work reviewable. Humans still define the problem, decide whether evidence is sufficient, handle exceptions, adopt or reject the judgment, and own any professional or investment decision.
 
